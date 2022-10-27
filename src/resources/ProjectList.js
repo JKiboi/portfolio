@@ -6,6 +6,7 @@ import movie from "../assets/movie.png"
 import recipe1 from "../assets/recipe1.png"
 import commerce from "../assets/commerce.png"
 import random from "../assets/random.png"
+import portfolio from "../assets/portfolio.png"
 
 export const ProjectList = [
     {
@@ -13,7 +14,7 @@ export const ProjectList = [
         image:recipe1,
         link: "https://celadon-croquembouche-2829f6.netlify.app",
         name:"Random Recipe Generator",
-        skills:"",
+        skills:"JavaScript,HTML5,CSS,ReactJS",
         github: "https://github.com/JKiboi/random-recipe-app.git"
         
         
@@ -75,6 +76,15 @@ export const ProjectList = [
         name:"E commerce App",
         skills:"Javascript",
         github:""
-      }
+      },
+      {
+        id: 9,
+        image: portfolio,
+        link: "https://whimsical-blini-647ba1.netlify.app/",
+        name:"Portfolio One",
+        skills:"Javascript",
+        github:""
+      },
+
 
 ]

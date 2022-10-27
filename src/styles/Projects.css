@@ -38,12 +38,30 @@
   transition: 0.3s ease-in;
   cursor: pointer;
 }
+.p-browser {
 
-.projectItem .bgImage {
+  height: 20px;
+  background-color: rgb(131, 78, 78);
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  z-index: 2;
+}
+
+.p-circle {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin: 3px;
+  background-color: white;
+}
+
+.projectItem .bgImage {
+  
   width: 100%;
-  height: 250px;
+  height: 245px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -60,5 +78,46 @@
 .projectItem p {
   top: 0;
   
+}
+@media only screen and (max-width: 1300px) {
+  .projectList {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .projectList {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .projectList {
+    width: 100%;
+    height: auto;
+    grid-template-columns: 1fr 1fr;
+  }
+  .projectItem {
+    width: 150px;
+    height: 170px;
+    margin: 30px;
+    
+     
+  }
+  .projectItem .bgImage{
+    width: 100%;
+    height: 110px;
+  }
+  .projectItem h1 {
+    font-size: 15px;
+  }
+  .projectItem p {
+    font-size: 10px;
+  }
+  .projectItem .git-skills{
+    margin-top: 15px;
+    line-height: 0;
+    
+  }
 }
 
