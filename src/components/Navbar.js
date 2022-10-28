@@ -22,11 +22,11 @@ const Navbar = () => {
            <Reorder/>
         </button>
       </div>
-      <div className='Links'>
+      <div className='links'>
          <Link to= "/">Home</Link>
          <Link to="/projects">Projects</Link>
          <Link to="/experience">Experience</Link>
-         <Link to="/contact" >Contact</Link>
+         <Link to="/contacts" >Contacts</Link>
       </div>
     </div>
   )

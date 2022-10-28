@@ -7,7 +7,7 @@ import emailjs from '@emailjs/browser';
 
 
 
-const Contact = () => {
+const Contacts = () => {
    const formRef=useRef()
    const [done,setDone]=useState(false)
 
@@ -79,7 +79,7 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default Contacts
 
 
 

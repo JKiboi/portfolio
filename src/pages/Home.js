@@ -9,11 +9,17 @@ const Home = () => {
         <h2>Hi, My name is James</h2>
          <div className="prompt">
           <p>A software developer with a passion for learning and creating</p>
-          <LinkedIn />
-          <Email />
+          <a href="https://github.com/JKiboi?tab=repositories">
           <GitHub />
+          </a>
+          <a href="https://twitter.com/home">
           <Twitter/>
-        </div>
+          </a>
+          <a href="https://www.linkedin.com/login">
+          <LinkedIn/>
+          </a>
+          <Email />
+          </div>
       </div>
       <div className="skills">
         <h1>Skills</h1>
