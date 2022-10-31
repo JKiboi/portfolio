@@ -1,7 +1,6 @@
 import React from "react";
 import { GitHub } from "@material-ui/icons";
 
-
 const ProjectItem = ({ image, name, link, github, skills }) => {
   return (
     <div className="projectItem">
@@ -15,10 +14,17 @@ const ProjectItem = ({ image, name, link, github, skills }) => {
         <h1>{name}</h1>
       </a>
       <div className="git-skills">
-      <a href={github} target="_blank" rel="noopener noreferrer" className="github">
-        <GitHub />
-      </a>
-      <p>Skills:<span style={{ fontWeight: "bold" }}>{skills}</span></p>
+        <a
+          href={github}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="github"
+        >
+          <GitHub />
+        </a>
+        <p>
+          Skills:<span style={{ fontWeight: "bold" }}>{skills}</span>
+        </p>
       </div>
     </div>
   );

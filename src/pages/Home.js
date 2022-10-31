@@ -27,7 +27,7 @@ const Home = () => {
           <li className="item">
             <h2>Front-End</h2>
             <span>
-              ReactJS,HTML,CSS,NPM,BootStrap,MaterialUI,StyledComponents
+              ReactJS,HTML,EmailJS,CSS,NPM,BootStrap,MaterialUI,StyledComponents
             </span>
           </li>
           <li className="item">

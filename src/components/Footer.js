@@ -1,6 +1,6 @@
 import React from 'react'
 import "../styles/Footer.css"
-import { Instagram, Twitter, YouTube,Facebook,LinkedIn } from '@material-ui/icons'
+import { Instagram,Twitter,Facebook,LinkedIn } from '@material-ui/icons'
 
 
 const Footer = () => {
@@ -12,7 +12,6 @@ const Footer = () => {
         <LinkedIn/>
         <Twitter/>
         <Facebook/>
-        <YouTube/>
       </div>
       <p>&copy; 2022 anythingtechke.com</p>
     </div>

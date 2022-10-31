@@ -37,12 +37,12 @@ const Experience = () => {
         </VerticalTimelineElement>
         <VerticalTimelineElement 
         className='vertical-timeline-element-education'
-        date='2021-present'
+        date='2019-present'
         iconStyle={{background:"teal",color:"#fff"}}
         icon={<WorkOutlineSharp/>}
         >
          <h3 className='vertical-timeline-element-title'>Facebook</h3>
-         <p>Developed two Redux state management systems</p>
+         <p>Developed the Redux state management system</p>
         </VerticalTimelineElement>
       </VerticalTimeline>
     </div>

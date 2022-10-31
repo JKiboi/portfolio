@@ -57,9 +57,6 @@
   }
   
   @media only screen and (max-width: 480px) {
-    .about{
-      justify-content: flex-start;
-    }
     .about h2 {
       font-size: 35px;
       
@@ -71,7 +68,6 @@
     }
   
     .skills {
-      text-align: center;
       overflow-wrap: break-word;
     }
     .list {
