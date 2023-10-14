@@ -13,7 +13,7 @@ const Footer = () => {
         <Twitter/>
         <Facebook/>
       </div>
-      <p>&copy; 2022 anythingtechke.com</p>
+      <p>&copy; 2023 anythingtechke.com</p>
     </div>
   )
 }

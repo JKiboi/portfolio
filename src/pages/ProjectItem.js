@@ -9,7 +9,7 @@ const ProjectItem = ({ image, name, link, github, skills }) => {
         <div className="p-circle"></div>
         <div className="p-circle"></div>
       </div>
-      <a href={link}>
+      <a href={link} target="_blank" rel="noopener noreferrer">
         <div style={{ backgroundImage: `url(${image})` }} className="bgImage" />
         <h1>{name}</h1>
       </a>

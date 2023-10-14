@@ -8,7 +8,7 @@ const Home = () => {
       <div className="about">
         <h2>Hi, My name is James</h2>
          <div className="prompt">
-          <p>A software developer with a passion for learning and creating</p>
+          <p>A software developer with a deep passion for learning and creating</p>
           <a href="https://github.com/JKiboi?tab=repositories">
           <GitHub />
           </a>
@@ -27,12 +27,12 @@ const Home = () => {
           <li className="item">
             <h2>Front-End</h2>
             <span>
-              ReactJS,HTML,EmailJS,CSS,NPM,BootStrap,MaterialUI,StyledComponents
+              HTML,CSS,Javascript,ReactJS 
             </span>
           </li>
           <li className="item">
             <h2>Back-End</h2>
-            <span>NodeJS,MySQL</span>
+            <span>NodeJS,ExpressJS,MongoDB Atlas,RESTful APIs,mpesa DARAJA APIs</span>
           </li>
           <li className="item">
             <h2>Languages</h2>

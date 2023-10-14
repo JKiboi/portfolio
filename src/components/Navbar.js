@@ -1,16 +1,16 @@
 import { Reorder } from '@material-ui/icons'
 import React, { useEffect, useState } from 'react'
-import { Link,useLocation } from 'react-router-dom'
+import { Link,useNavigate } from 'react-router-dom'
 import "../styles/Navbar.css"
 
 
 const Navbar = () => {
    const [expandNavbar,setExpandNavbar]=useState(false)
-   const location=useLocation()
+   const navigate=useNavigate()
 
    useEffect(()=>{
     setExpandNavbar(false)
-   },[location])
+   },[navigate])
 
    
   return (
