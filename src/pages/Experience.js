@@ -23,7 +23,7 @@ const Experience = () => {
         iconStyle={{background:"coral",color:"#fff"}}
         icon={<SchoolOutlined/>}
         >
-         <h3 className='vertical-timeline-element-title'>My random University</h3>
+         <h3 className='vertical-timeline-element-title'>Moi University</h3>
          <p>University Certificate</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement 
@@ -33,7 +33,7 @@ const Experience = () => {
         icon={<WorkOutline/>}
         >
          <h3 className='vertical-timeline-element-title'>Spotify</h3>
-         <p>Developed frontend structure for three projects</p>
+         <p>Developed frontend for podcast project</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement 
         className='vertical-timeline-element-education'
@@ -42,7 +42,7 @@ const Experience = () => {
         icon={<WorkOutlineSharp/>}
         >
          <h3 className='vertical-timeline-element-title'>Facebook</h3>
-         <p>Developed the Redux state management system</p>
+         <p>Built apis using node.js for new features updates </p>
         </VerticalTimelineElement>
       </VerticalTimeline>
     </div>
