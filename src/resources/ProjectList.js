@@ -8,7 +8,6 @@ import commerce2 from "../assets/commerce2.png";
 import random from "../assets/random.png";
 import portfolio from "../assets/portfolio.png";
 import travels from "../assets/travels.png";
-import annelle from "../assets/annelle.png";
 import supa from "../assets/supa.png";
 import radio from "../assets/radio.png";
 import onlinebiddingapp from "../assets/onlinebiddingapp.png";
@@ -51,9 +50,9 @@ export const ProjectList = [
   {
     id: 5,
     image: travels,
-    link: "https://billy-travels.netlify.app/",
+    link: "https://tours-and-travel-app.onrender.com",
     name: "Travel and Tours",
-    skills: "ReactJS ,CSS ,HTML",
+    skills: "ReactJS,Node.js,Express.js,MongoDB Atlas",
     github: "",
   },
 
