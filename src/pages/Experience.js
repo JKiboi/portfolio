@@ -33,16 +33,25 @@ const Experience = () => {
         icon={<WorkOutline/>}
         >
          <h3 className='vertical-timeline-element-title'>Spotify</h3>
-         <p>Developed frontend for podcast project</p>
+         <p>Developed React frontend for the podcast project</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement 
         className='vertical-timeline-element-education'
-        date='2019-present'
+        date='2019-2021'
         iconStyle={{background:"teal",color:"#fff"}}
         icon={<WorkOutlineSharp/>}
         >
          <h3 className='vertical-timeline-element-title'>Facebook</h3>
          <p>Built apis using node.js for new features updates </p>
+        </VerticalTimelineElement>
+        <VerticalTimelineElement 
+        className='vertical-timeline-element-education'
+        date='2021-present'
+        iconStyle={{background:"teal",color:"#fff"}}
+        icon={<WorkOutlineSharp/>}
+        >
+         <h3 className='vertical-timeline-element-title'>Bidmania Ventures</h3>
+         <p>Implemented backend ,MongoDB database and intergrated mpesa online payment using Daraja API </p>
         </VerticalTimelineElement>
       </VerticalTimeline>
     </div>

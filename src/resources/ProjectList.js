@@ -18,41 +18,44 @@ export const ProjectList = [
     id: 1,
     image: waterapp,
     link: "https://mern-annelle-app.onrender.com",
-    name: "water business management app",
+    name: "Business management app",
     skills: "ReactJS,Node.js,Express.js,MongoDB Atlas,Daraja API",
     github: "https://github.com/JKiboi/mern-annelle-waters-app-frontend",
   },
 
   {
     id: 2,
-    image: commerce2,
-    link: "https://singular-piroshki-00fdce.netlify.app/",
-    name: "E commerce App",
-    skills: "ReactJS ,CSS ,HTML",
-    github: "",
-  },
-  {
-    id: 3,
     image: onlinebiddingapp,
     link: "https://angukia-mali3-app.onrender.com",
     name: "Online bidding app",
     skills: "ReactJS,Node.js,Express.js,MongoDB Atlas,mpesa-Daraja API",
     github: "",
   },
+
   {
-    id: 4,
-    image: portfolio,
-    link: "https://whimsical-blini-647ba1.netlify.app/",
-    name: "Portfolio One",
+    id: 3,
+    image: commerce2,
+    link: "https://singular-piroshki-00fdce.netlify.app/",
+    name: "E commerce App",
     skills: "ReactJS ,CSS ,HTML",
     github: "",
   },
+
   {
-    id: 5,
+    id: 4,
     image: travels,
     link: "https://tours-and-travel-app.onrender.com",
     name: "Travel and Tours",
     skills: "ReactJS,Node.js,Express.js,MongoDB Atlas",
+    github: "",
+  },
+
+  {
+    id: 5,
+    image: portfolio,
+    link: "https://whimsical-blini-647ba1.netlify.app/",
+    name: "Portfolio",
+    skills: "ReactJS ,CSS ,HTML",
     github: "",
   },
 
@@ -64,6 +67,7 @@ export const ProjectList = [
     skills: "ReactJS ,CSS ,HTML",
     github: "https://github.com/JKiboi/weather-app-two.git",
   },
+
   {
     id: 7,
     image: quiz,
@@ -72,6 +76,7 @@ export const ProjectList = [
     skills: "ReactJS ,CSS ,HTML",
     github: "https://github.com/JKiboi/quiz-app-two.git",
   },
+
   {
     id: 8,
     image: calculator,
@@ -80,6 +85,7 @@ export const ProjectList = [
     skills: "ReactJS ,CSS ,HTML",
     github: "https://github.com/JKiboi/react-calculator-two.git",
   },
+
   {
     id: 9,
     image: movie,
@@ -88,6 +94,7 @@ export const ProjectList = [
     skills: "JReactJS ,CSS ,HTML",
     github: "",
   },
+
   {
     id: 10,
     image: recipe,
@@ -105,6 +112,7 @@ export const ProjectList = [
     skills: "ReactJS ,CSS ,HTML",
     github: "",
   },
+
   {
     id: 12,
     image: radio,
@@ -113,6 +121,7 @@ export const ProjectList = [
     skills: "ReactJS ,CSS ,HTML",
     github: "",
   },
+
   {
     id: 13,
     image: random,
