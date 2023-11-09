@@ -12,6 +12,7 @@ import supa from "../assets/supa.png";
 import radio from "../assets/radio.png";
 import onlinebiddingapp from "../assets/onlinebiddingapp.png";
 import waterapp from "../assets/annelle-home.png";
+import reduxapp from "../assets/reduxapp.png";
 
 export const ProjectList = [
   {
@@ -106,10 +107,10 @@ export const ProjectList = [
 
   {
     id: 11,
-    image: supa,
-    link: "https://supa-app.netlify.app/",
-    name: "Supa app",
-    skills: "ReactJS ,CSS ,HTML",
+    image: reduxapp,
+    link: "https://redux-counter-todo-app.onrender.com/",
+    name: "Redux counter todos app",
+    skills: "ReactJS,redux ,CSS ,HTML",
     github: "",
   },
 
@@ -139,4 +140,14 @@ export const ProjectList = [
     skills: "ReactJS ,CSS ,HTML",
     github: "https://github.com/JKiboi/random-recipe-app.git",
   },
+
+  {
+    id: 14,
+    image: supa,
+    link: "https://supa-app.netlify.app/",
+    name: "Supa app",
+    skills: "ReactJS ,CSS ,HTML",
+    github: "",
+  },
+
 ];
