@@ -8,7 +8,6 @@ import commerce2 from "../assets/commerce2.png";
 import random from "../assets/random.png";
 import portfolio from "../assets/portfolio.png";
 import travels from "../assets/travels.png";
-import supa from "../assets/supa.png";
 import radio from "../assets/radio.png";
 import onlinebiddingapp from "../assets/onlinebiddingapp.png";
 import waterapp from "../assets/annelle-home.png";
@@ -139,15 +138,6 @@ export const ProjectList = [
     name: "Random Recipe Generator",
     skills: "ReactJS ,CSS ,HTML",
     github: "https://github.com/JKiboi/random-recipe-app.git",
-  },
-
-  {
-    id: 14,
-    image: supa,
-    link: "https://supa-app.netlify.app/",
-    name: "Supa app",
-    skills: "ReactJS ,CSS ,HTML",
-    github: "",
   },
 
 ];

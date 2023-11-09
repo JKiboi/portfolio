@@ -69,9 +69,23 @@
 .projectItem h1 {
   font-size: 25px;
 }
-.projectItem .github{
-  
+.projectItem .github {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3e497a;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 18px;
+  margin: 0 auto 10px;
+  transition: background-color 0.3s ease-in-out;
+  text-decoration: none;
+}
 
+.projectItem .github:hover {
+  background-color: #007bff;
 }
 .projectItem p {
   top: 0;
@@ -116,6 +130,11 @@
     margin-top: 15px;
     line-height: 0;
     
+  }
+  .projectItem .github {
+    width: 20px;
+    height: 20px;
+    font-size: 11px;
   }
 }
 

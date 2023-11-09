@@ -1,6 +1,7 @@
 import { Email, GitHub, LinkedIn, Twitter } from "@material-ui/icons";
 import React from "react";
 import "../styles/Home.css"
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -19,6 +20,9 @@ const Home = () => {
           <LinkedIn/>
           </a>
           <Email />
+          </div>
+          <div className="resume">
+          <Link to="/resume">View Resume</Link>
           </div>
       </div>
       <div className="skills">
