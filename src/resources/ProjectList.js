@@ -126,7 +126,7 @@ export const ProjectList = [
     id: 13,
     image: random,
     link: "https://singular-sprite-dd88fb.netlify.app/",
-    name: "Radio quote bot",
+    name: "Random quote bot",
     skills: "ReactJS ,CSS ,HTML",
     github: "https://github.com/JKiboi/random-quote-bot.git",
   },
