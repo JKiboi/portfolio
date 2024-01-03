@@ -12,6 +12,7 @@ import radio from "../assets/radio.png";
 import onlinebiddingapp from "../assets/onlinebiddingapp.png";
 import waterapp from "../assets/annelle-home.png";
 import reduxapp from "../assets/reduxapp.png";
+import event from "../assets/event.png";
 
 export const ProjectList = [
   {
@@ -40,9 +41,17 @@ export const ProjectList = [
     skills: "ReactJS ,CSS ,HTML",
     github: "",
   },
-
   {
     id: 4,
+    image: event,
+    link: "https://event-tickets-app.onrender.com",
+    name: "Event Ticketing App",
+    skills: "ReactJS,Node.js,Express.js,MongoDB Atlas,mpesa-Daraja API",
+    github: "",
+  },
+
+  {
+    id: 5,
     image: travels,
     link: "https://tours-and-travel-app.onrender.com",
     name: "Travel and Tours",
@@ -51,7 +60,7 @@ export const ProjectList = [
   },
 
   {
-    id: 5,
+    id: 6,
     image: portfolio,
     link: "https://whimsical-blini-647ba1.netlify.app/",
     name: "Portfolio",
@@ -60,7 +69,7 @@ export const ProjectList = [
   },
 
   {
-    id: 6,
+    id: 7,
     image: weather,
     link: "https://harmonious-sfogliatella-7ad5e5.netlify.app/",
     name: "Weather App",
@@ -69,7 +78,7 @@ export const ProjectList = [
   },
 
   {
-    id: 7,
+    id: 8,
     image: quiz,
     link: "https://tv-quiz-kenya.netlify.app/",
     name: "Quiz App",
@@ -78,7 +87,7 @@ export const ProjectList = [
   },
 
   {
-    id: 8,
+    id: 9,
     image: calculator,
     link: "https://boisterous-lokum-6251ea.netlify.app/",
     name: "Calculator App",
@@ -87,7 +96,7 @@ export const ProjectList = [
   },
 
   {
-    id: 9,
+    id: 10,
     image: movie,
     link: "https://extraordinary-pithivier-10754f.netlify.app/",
     name: "Movie App",
@@ -96,7 +105,7 @@ export const ProjectList = [
   },
 
   {
-    id: 10,
+    id: 11,
     image: recipe,
     link: "https://elegant-bombolone-d7cb31.netlify.app/",
     name: "Recipe App",
@@ -105,7 +114,7 @@ export const ProjectList = [
   },
 
   {
-    id: 11,
+    id: 12,
     image: reduxapp,
     link: "https://redux-counter-todo-app.onrender.com/",
     name: "Redux counter todos app",
@@ -114,7 +123,7 @@ export const ProjectList = [
   },
 
   {
-    id: 12,
+    id: 13,
     image: radio,
     link: "https://boisterous-phoenix-e5962c.netlify.app/",
     name: "Radio lottery app",
@@ -123,7 +132,7 @@ export const ProjectList = [
   },
 
   {
-    id: 13,
+    id: 14,
     image: random,
     link: "https://singular-sprite-dd88fb.netlify.app/",
     name: "Random quote bot",
@@ -132,7 +141,7 @@ export const ProjectList = [
   },
 
   {
-    id: 14,
+    id: 15,
     image: recipe1,
     link: "https://celadon-croquembouche-2829f6.netlify.app",
     name: "Random Recipe Generator",
