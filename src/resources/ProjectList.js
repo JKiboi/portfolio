@@ -9,7 +9,7 @@ import random from "../assets/random.png";
 import portfolio from "../assets/portfolio.png";
 import travels from "../assets/travels.png";
 import radio from "../assets/radio.png";
-import onlinebiddingapp from "../assets/onlinebiddingapp.png";
+import bidmaniaapp from "../assets/bidmaniaapp.png";
 import waterapp from "../assets/annelle-home.png";
 import reduxapp from "../assets/reduxapp.png";
 import event from "../assets/event.png";
@@ -26,7 +26,7 @@ export const ProjectList = [
 
   {
     id: 2,
-    image: onlinebiddingapp,
+    image: bidmaniaapp,
     link: "https://bidmania-vite-app.onrender.com/",
     name: "Online bidding app",
     skills: "ReactJS,Node.js,Express.js,MongoDB Atlas,mpesa-Daraja API",
