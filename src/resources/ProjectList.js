@@ -27,7 +27,7 @@ export const ProjectList = [
   {
     id: 2,
     image: bidmaniaapp,
-    link: "https://bidmania-vite-app.onrender.com/",
+    link: "https://bidmania-vite-app.onrender.com",
     name: "Online bidding app",
     skills: "ReactJS,Node.js,Express.js,MongoDB Atlas,mpesa-Daraja API",
     github: "",
