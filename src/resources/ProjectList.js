@@ -30,7 +30,7 @@ export const ProjectList = [
     image: waterapp,
     link: "https://mern-annelle-app.onrender.com",
     name: "Business management app",
-    skills: "ReactJS,Node.js,Express.js,MongoDB Atlas,Daraja API",
+    skills: "ReactJS,Node.js,Express.js,MongoDB Atlas",
     github: "https://github.com/JKiboi/mern-annelle-waters-app-frontend",
   },
 
