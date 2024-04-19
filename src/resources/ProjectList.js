@@ -22,7 +22,7 @@ export const ProjectList = [
   {
     id: 1,
     image: hosi,
-    link: "https://hosi-app.onrender.com",
+    link: "https://saas-hosi-app.onrender.com",
     name: "Hospital management app",
     skills: "ReactJS,Node.js,Express.js,MongoDB Atlas",
     github: "",
