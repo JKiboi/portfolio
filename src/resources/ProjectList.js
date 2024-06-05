@@ -126,7 +126,7 @@ export const ProjectList = [
   {
     id: 14,
     image: movie,
-    link: "https://extraordinary-pithivier-10754f.netlify.app/",
+    link: "https://movies-app-updated.onrender.com",
     name: "Movie App",
     skills: "JReactJS ,CSS ,HTML",
     github: "",
