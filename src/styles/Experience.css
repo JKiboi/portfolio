@@ -1,0 +1,25 @@
+.experience {
+    padding: 20px;
+    background-color: #f8f9fa;
+  }
+  
+  .vertical-timeline-element-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .vertical-timeline-element-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .vertical-timeline-element--education .vertical-timeline-element-content {
+    background-color: #3e497a;
+    color: #fff;
+  }
+  
+  .vertical-timeline-element--work .vertical-timeline-element-content {
+    background-color: #e9d35b;
+    color: #fff;
+  }
+  

@@ -1,21 +1,19 @@
-import React from 'react'
-import "../styles/Footer.css"
-import { Instagram,Twitter,Facebook,LinkedIn } from '@material-ui/icons'
-
+import React from 'react';
+import "../styles/Footer.css";
+import { Instagram, Twitter, Facebook, LinkedIn } from '@material-ui/icons';
 
 const Footer = () => {
   return (
-    <div className='footer'>
+    <footer className='footer'>
       <div className='social-media'>
-        <Instagram/>
-        <Facebook/>
-        <LinkedIn/>
-        <Twitter/>
-        <Facebook/>
+        <Instagram className='icon' />
+        <Facebook className='icon' />
+        <LinkedIn className='icon' />
+        <Twitter className='icon' />
       </div>
       <p>&copy; 2023 anythingtechke.com</p>
-    </div>
-  )
-}
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;
