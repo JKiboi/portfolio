@@ -1,0 +1,47 @@
+/* src/styles/GlobalStyles.css */
+:root {
+    /* Color Palette */
+    --primary-color: #007bff;
+    --secondary-color: #9b59b6;
+    --background-color: #f8f9fa;
+    --card-background: #fff;
+    --text-light: #fff;
+    --text-dark: #333;
+  
+    /* Typography */
+    --base-font-size: 16px;
+    --base-line-height: 1.5;
+    --heading-font-size: 2rem;
+  
+    /* Spacing */
+    --base-margin: 10px;
+    --base-padding: 10px;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    font-size: var(--base-font-size);
+    line-height: var(--base-line-height);
+    margin: 0; /* Reset body margin */
+    padding: 0;
+    color: var(--text-dark);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+      color: var(--text-dark);
+    margin-bottom: 1rem;
+  }
+  
+  a {
+    text-decoration: none; /* Remove default underline */
+  }
+  
+  ul {
+    list-style: none; /* Remove default list bullets */
+    padding: 0;
+  }
+  
+  /* Example of using the CSS variables */
+  .container {
+    padding: var(--base-padding);
+  }

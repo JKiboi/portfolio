@@ -1,0 +1,28 @@
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .social-links a {
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+      transition: color 0.3s ease-in-out;
+  }
+  .social-links a:hover {
+      color: #ffd700;
+  }
+  
+  @media only screen and (max-width: 768px) {
+      .social-links {
+          flex-direction: column;
+          align-items: center;
+      }
+  
+      .social-links a {
+          font-size: 1.5rem;
+          margin: 10px 0;
+      }
+  }

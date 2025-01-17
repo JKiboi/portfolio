@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
 import Contacts from "./pages/Contacts";
 import Resume from "./pages/Resume"; // Import the Resume component
+import "./styles/GlobalStyles.css" // Import Global styles
 
 function App() {
   return (

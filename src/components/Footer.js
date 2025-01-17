@@ -1,17 +1,35 @@
 import React from 'react';
 import "../styles/Footer.css";
-import { Instagram, Twitter, Facebook, LinkedIn } from '@material-ui/icons';
+import { Instagram, Twitter, Facebook, LinkedIn, Email } from '@material-ui/icons';
 
 const Footer = () => {
   return (
-    <footer className='footer'>
-      <div className='social-media'>
-        <Instagram className='icon' />
-        <Facebook className='icon' />
-        <LinkedIn className='icon' />
-        <Twitter className='icon' />
+    <footer className="footer">
+      <div className="footer-content">
+        <div className="social-links">
+          <a href="https://instagram.com/" aria-label="Instagram">
+            <Instagram className="icon" />
+          </a>
+          <a href="https://facebook.com/" aria-label="Facebook">
+            <Facebook className="icon" />
+          </a>
+          <a href="https://linkedin.com/" aria-label="LinkedIn">
+            <LinkedIn className="icon" />
+          </a>
+          <a href="https://twitter.com/" aria-label="Twitter">
+            <Twitter className="icon" />
+          </a>
+            <a href="mailto:anythingtechke@gmail.com" aria-label="Email">
+            <Email className="icon" />
+          </a>
+        </div>
+        <div className="footer-text">
+          <p>© {new Date().getFullYear()} anythingtechke.com</p>
+          <p>
+            Crafted with ❤️ by James Kiboi
+          </p>
+        </div>
       </div>
-      <p>&copy; 2023 anythingtechke.com</p>
     </footer>
   );
 };

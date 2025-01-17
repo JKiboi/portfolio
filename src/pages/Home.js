@@ -1,7 +1,14 @@
-import { Email, GitHub, LinkedIn, Twitter } from "@material-ui/icons";
 import React from "react";
 import "../styles/Home.css";
+import { SocialLinks } from "../components/SocialLinks";
 import { Link } from "react-router-dom";
+
+const SkillItem = ({ title, skills }) => (
+    <li className="item">
+        <h2>{title}</h2>
+        <span>{skills}</span>
+    </li>
+);
 
 const Home = () => {
   return (
@@ -9,21 +16,11 @@ const Home = () => {
       <div className="about">
         <h2>Hi, My name is James</h2>
         <div className="prompt">
-          <p>A software developer with a deep passion for learning and creating solutions that solve real-life challenges.</p>
-          <div className="social-links">
-            <a href="https://github.com/JKiboi?tab=repositories">
-              <GitHub />
-            </a>
-            <a href="https://twitter.com/home">
-              <Twitter />
-            </a>
-            <a href="https://www.linkedin.com/login">
-              <LinkedIn />
-            </a>
-            <a href="mailto:anythingtechke@gmail.com">
-              <Email />
-            </a>
-          </div>
+          <p>
+            A software developer with a deep passion for learning and creating
+            solutions that solve real-life challenges.
+          </p>
+          <SocialLinks />
         </div>
         <div className="resume">
           <Link to="/resume">View Resume</Link>
@@ -32,18 +29,13 @@ const Home = () => {
       <div className="skills">
         <h1>Skills</h1>
         <ol className="list">
-          <li className="item">
-            <h2>Front-End</h2>
-            <span>HTML, CSS, JavaScript, ReactJS</span>
-          </li>
-          <li className="item">
-            <h2>Back-End</h2>
-            <span>NodeJS, ExpressJS, MongoDB Atlas, RESTful APIs, Mpesa DARAJA API</span>
-          </li>
-          <li className="item">
-            <h2>Languages</h2>
-            <span>JavaScript, TypeScript, CSS3, HTML5</span>
-          </li>
+          <SkillItem title="Front-End" skills="ReactJS" />
+          <SkillItem
+            title="Back-End"
+            skills="NodeJS, ExpressJS, RESTful APIs, Mpesa DARAJA API"
+          />
+          <SkillItem title="Database" skills="MongoDB Atlas" />
+          <SkillItem title="Languages" skills="JavaScript, TypeScript, CSS3, HTML5" />
         </ol>
       </div>
     </div>
