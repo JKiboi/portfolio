@@ -14,7 +14,7 @@ import hosi from "../assets/hosi.png";
 import billy from "../assets/billy.png";
 import payment from "../assets/payment.png";
 import cliniclog from "../assets/cliniclog.png";
-import events from "../assets/events.png";
+import events from "../assets/events1.png";
 import bikes from "../assets/bikes.png";
 import maths from "../assets/maths.png";
 import aviator from "../assets/aviator.png";
@@ -32,7 +32,7 @@ export const ProjectList = [
   {
     id: 2,
     image: events,
-    link: "https://new-event-ticketing-app.onrender.com",
+    link: "https://tikitiflow.onrender.com",
     name: "Event Ticketing app",
     skills: "ReactJS, Node.js, Express.js, MongoDB Atlas,RestfulApi,Daraja API",
     github: "",
