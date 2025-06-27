@@ -6,7 +6,7 @@
 
 .about {
   width: 100%;
-  height: calc(100vh - 100px);
+  min-height: calc(100vh - 100px); /* Use min-height for flexibility */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,6 +23,7 @@
   font-size: 4rem; /* Increased size */
   color: #ffd700; /* Changed color to gold */
   min-height: 100px; /* Ensure enough space for the text */
+  word-break: break-word; /* Allow long words to break */
 }
 
 .about .prompt {
@@ -43,21 +44,39 @@
 
 @media only screen and (max-width: 768px) {
   .typed-text {
-    font-size: 3rem;
+    font-size: 2.5rem; /* Further reduced for tablets */
+    min-height: 80px;
   }
   .about .prompt {
     font-size: 1.1rem;
     width: 90%;
   }
+  .developer-photo {
+    width: 150px; /* Smaller size for tablets */
+    height: 150px;
+    margin-bottom: 20px;
+  }
 }
 
 @media only screen and (max-width: 480px) {
   .typed-text {
-    font-size: 2.5rem;
+    font-size: 1.8rem; /* Significantly reduced for mobile */
+    min-height: 60px;
   }
   .about .prompt {
-    font-size: 1rem;
-    width: 100%;
+    font-size: 0.9rem;
+    width: 95%;
+  }
+  .developer-photo {
+    width: 120px; /* Even smaller for mobile */
+    height: 120px;
+    margin-bottom: 15px;
+  }
+  .skills h1 {
+    font-size: 2rem;
+  }
+  .skills .list span {
+    font-size: 0.9rem;
   }
 }
 
