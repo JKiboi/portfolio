@@ -28,6 +28,7 @@ export const ProjectList = [
     name: "Motorbike Credit Sales app",
     skills: "ReactJS, Node.js, Express.js, MongoDB Atlas",
     github: "",
+    category: "Full-Stack",
   },
   {
     id: 2,
@@ -36,6 +37,7 @@ export const ProjectList = [
     name: "Event Ticketing app",
     skills: "ReactJS, Node.js, Express.js, MongoDB Atlas,RestfulApi,Daraja API",
     github: "",
+    category: "Full-Stack",
   },
   {
     id: 3,
@@ -44,6 +46,7 @@ export const ProjectList = [
     name: "Hotel Meals Booking app",
     skills: "ReactJS, Node.js, Express.js, MongoDB Atlas",
     github: "",
+    category: "Full-Stack",
   },
   {
     id: 4,
@@ -52,6 +55,7 @@ export const ProjectList = [
     name: "Simulated Aviator game app",
     skills: "ReactJS, Node.js, Express.js, MongoDB Atlas",
     github: "",
+    category: "Full-Stack",
   },
   {
     id: 5,
@@ -60,6 +64,7 @@ export const ProjectList = [
     name: "Movie Review App",
     skills: "ReactJS, CSS, HTML",
     github: "",
+    category: "Front-End",
   },
   {
     id: 6,
@@ -68,6 +73,7 @@ export const ProjectList = [
     name: "Interactive-Maths app",
     skills: "ReactJS",
     github: "",
+    category: "Front-End",
   },
   {
     id: 7,
@@ -76,6 +82,7 @@ export const ProjectList = [
     name: "Quiz App",
     skills: "ReactJS, CSS, HTML",
     github: "https://github.com/JKiboi/quiz-app-two.git",
+    category: "Front-End",
   },
   {
     id: 8,
@@ -84,6 +91,7 @@ export const ProjectList = [
     name: "Hospital management app",
     skills: "ReactJS, Node.js, Express.js, MongoDB Atlas",
     github: "",
+    category: "Full-Stack",
   },
   {
     id: 9,
@@ -92,6 +100,7 @@ export const ProjectList = [
     name: "Billy Travels app",
     skills: "ReactJS, Node.js, Express.js, MongoDB Atlas, Daraja API",
     github: "",
+    category: "Full-Stack",
   },
   {
     id: 10,
@@ -100,6 +109,7 @@ export const ProjectList = [
     name: "Lowest unique bidding app",
     skills: "ReactJS, Node.js, Express.js, MongoDB Atlas, Daraja API",
     github: "",
+    category: "Full-Stack",
   },
   {
     id: 11,
@@ -108,6 +118,7 @@ export const ProjectList = [
     name: "Clinic Log",
     skills: "ReactJS, Node.js, Express.js, MongoDB Atlas",
     github: "",
+    category: "Full-Stack",
   },
   {
     id: 12,
@@ -116,6 +127,7 @@ export const ProjectList = [
     name: "Payment Tracking App",
     skills: "ReactJS, Node.js, Express.js, exceljs",
     github: "",
+    category: "Full-Stack",
   },
   {
     id: 13,
@@ -124,6 +136,7 @@ export const ProjectList = [
     name: "Business management app",
     skills: "ReactJS, Node.js, Express.js, MongoDB Atlas",
     github: "https://github.com/JKiboi/mern-annelle-waters-app-frontend",
+    category: "Full-Stack",
   },
   {
     id: 14,
@@ -132,6 +145,7 @@ export const ProjectList = [
     name: "Online bidding app",
     skills: "ReactJS, Node.js, Express.js, MongoDB Atlas, mpesa-Daraja API",
     github: "",
+    category: "Full-Stack",
   },
   {
     id: 15,
@@ -140,6 +154,7 @@ export const ProjectList = [
     name: "E commerce App",
     skills: "ReactJS, CSS, HTML",
     github: "",
+    category: "Front-End",
   },
   {
     id: 16,
@@ -148,6 +163,7 @@ export const ProjectList = [
     name: "Travel and Tours",
     skills: "ReactJS, Node.js, Express.js, MongoDB Atlas",
     github: "",
+    category: "Full-Stack",
   },
   {
     id: 17,
@@ -156,6 +172,7 @@ export const ProjectList = [
     name: "Portfolio",
     skills: "ReactJS, CSS, HTML",
     github: "",
+    category: "Front-End",
   },
   {
     id: 18,
@@ -164,6 +181,7 @@ export const ProjectList = [
     name: "Weather App",
     skills: "ReactJS, CSS, HTML",
     github: "https://github.com/JKiboi/weather-app-two.git",
+    category: "Front-End",
   },
   {
     id: 19,
@@ -172,6 +190,7 @@ export const ProjectList = [
     name: "Calculator App",
     skills: "ReactJS, CSS, HTML",
     github: "https://github.com/JKiboi/react-calculator-two.git",
+    category: "Front-End",
   },
   {
     id: 20,
@@ -180,6 +199,7 @@ export const ProjectList = [
     name: "Recipe App",
     skills: "ReactJS, CSS, HTML",
     github: "",
+    category: "Front-End",
   },
   {
     id: 21,
@@ -188,5 +208,6 @@ export const ProjectList = [
     name: "Redux counter todos app",
     skills: "ReactJS, redux, CSS, HTML",
     github: "",
+    category: "Front-End",
   },
 ]

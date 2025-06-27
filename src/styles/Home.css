@@ -18,40 +18,51 @@
   box-sizing: border-box;
 }
 
-.about h2 {
+.typed-text {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 3rem;
+  font-size: 4rem; /* Increased size */
   color: #ffd700; /* Changed color to gold */
+  min-height: 100px; /* Ensure enough space for the text */
 }
 
 .about .prompt {
   width: 60%;
-  font-size: 1.2rem;
+  font-size: 1.5rem; /* Increased size */
+  margin-top: 20px; /* Add some space below the typed text */
 }
 
-
-
-.about .resume {
-  margin-top: 20px;
+@media only screen and (max-width: 1200px) {
+  .typed-text {
+    font-size: 3.5rem;
+  }
+  .about .prompt {
+    font-size: 1.3rem;
+    width: 80%;
+  }
 }
 
-.about .resume a {
-    color: var(--text-dark);
-  text-decoration: none;
-  font-size: 1.2rem;
-  border: 2px solid var(--text-dark);
-  padding: 10px 20px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+@media only screen and (max-width: 768px) {
+  .typed-text {
+    font-size: 3rem;
+  }
+  .about .prompt {
+    font-size: 1.1rem;
+    width: 90%;
+  }
 }
 
-.about .resume a:hover {
-  background-color: var(--text-dark);
-  color: var(--text-light);
+@media only screen and (max-width: 480px) {
+  .typed-text {
+    font-size: 2.5rem;
+  }
+  .about .prompt {
+    font-size: 1rem;
+    width: 100%;
+  }
 }
 
 .skills {
-  font-size: 1.5rem;
+  font-size: 1.8rem; /* Increased size */
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -62,8 +73,8 @@
 }
 
 .skills h1 {
-    color: var(--text-dark);
-  font-size: 2rem;
+  color: var(--text-dark);
+  font-size: 2.5rem; /* Increased size */
 }
 
 .skills .list {
@@ -77,57 +88,77 @@
 }
 
 .list span {
-  font-size: 1rem;
+  font-size: 1.2rem; /* Increased size */
   display: block; /* Display on new line */
   margin-top: 5px;
 }
 
 @media only screen and (max-width: 1200px) {
   .about h2 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
   }
   .about .prompt {
-    font-size: 1rem;
+    font-size: 1.3rem;
     width: 80%;
   }
 
   .skills {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 }
 
 @media only screen and (max-width: 768px) {
   .about h2 {
-    font-size: 2rem;
+    font-size: 3rem;
   }
   .about .prompt {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     width: 90%;
   }
 
-    .skills {
-    font-size: 1rem;
+  .skills {
+    font-size: 1.3rem;
   }
 }
 
 @media only screen and (max-width: 480px) {
   .about h2 {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
   }
   .about .prompt {
-    font-size: 0.8rem;
+    font-size: 1rem;
     width: 100%;
   }
-   .skills {
-    font-size: 0.9rem;
+  .skills {
+    font-size: 1.1rem;
     width: 100%;
   }
 
   .skills h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   .list span {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
+}
+
+.developer-photo {
+  width: 200px; /* Increased size */
+  height: 200px; /* Increased size */
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 30px; /* Increased margin */
+  box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.3), 0 0 0 10px rgba(255, 255, 255, 0.1); /* Subtle white border effect */
+  transition: box-shadow 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+.developer-photo:hover {
+  box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.5), 0 0 0 15px rgba(255, 255, 255, 0.2); /* Slightly larger shadow on hover */
+}
+
+.developer-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

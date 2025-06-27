@@ -1,21 +1,50 @@
 /* src/styles/GlobalStyles.css */
 :root {
-    /* Color Palette */
-    --primary-color: #007bff;
-    --secondary-color: #9b59b6;
-    --background-color: #f8f9fa;
-    --card-background: #fff;
-    --text-light: #fff;
-    --text-dark: #333;
+    /* Light Theme Colors */
+    --primary-color-light: #007bff;
+    --secondary-color-light: #9b59b6;
+    --background-color-light: #f8f9fa;
+    --card-background-light: #fff;
+    --text-light-light: #fff;
+    --text-dark-light: #333;
+  
+    /* Dark Theme Colors */
+    --primary-color-dark: #66b3ff;
+    --secondary-color-dark: #5c2a7a;
+    --background-color-dark: #282c36;
+    --card-background-dark: #3a3f4b;
+    --text-light-dark: #e0e0e0;
+    --text-dark-dark: #f8f9fa;
+    --skill-bar-bg-light: #e0e0e0;
+    --skill-bar-bg-dark: #555;
+  
+    /* Default to Light Theme */
+    --primary-color: var(--primary-color-light);
+    --secondary-color: var(--secondary-color-light);
+    --background-color: var(--background-color-light);
+    --card-background: var(--card-background-light);
+    --text-light: var(--text-light-light);
+    --text-dark: var(--text-dark-light);
+    --skill-bar-bg: var(--skill-bar-bg-light);
   
     /* Typography */
-    --base-font-size: 16px;
-    --base-line-height: 1.5;
-    --heading-font-size: 2rem;
+    --base-font-size: 20px; /* Increased base font size */
+    --base-line-height: 1.8; /* Increased line height */
+    --heading-font-size: 2.5rem; /* Adjusted heading size */
   
     /* Spacing */
-    --base-margin: 10px;
-    --base-padding: 10px;
+    --base-margin: 12px;
+    --base-padding: 15px;
+  }
+  
+  body.dark-theme {
+    --primary-color: var(--primary-color-dark);
+    --secondary-color: var(--secondary-color-dark);
+    --background-color: var(--background-color-dark);
+    --card-background: var(--card-background-dark);
+    --text-light: var(--text-light-dark);
+    --text-dark: var(--text-dark-dark);
+    --skill-bar-bg: var(--skill-bar-bg-dark);
   }
   
   body {

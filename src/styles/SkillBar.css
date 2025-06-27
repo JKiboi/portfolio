@@ -1,0 +1,33 @@
+.skill-bar-container {
+  width: 80%;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.skill-title {
+  font-size: 1.2rem;
+  color: var(--text-dark);
+  margin-bottom: 5px;
+}
+
+.skill-bar-bg {
+  background-color: var(--skill-bar-bg);
+  border-radius: 5px;
+  height: 15px;
+  overflow: hidden;
+}
+
+.skill-bar-fill {
+  background-color: var(--primary-color);
+  height: 100%;
+  border-radius: 5px;
+  transition: width 1.5s ease-out;
+}
+
+.skill-percentage {
+  font-size: 1rem;
+  color: var(--text-dark);
+  margin-top: 5px;
+  display: block;
+  text-align: right;
+}

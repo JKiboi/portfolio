@@ -51,7 +51,7 @@ const Contacts = () => {
             </div>
             <div className="c-info-item">
               <img src={Address} alt="Address icon" className="c-icon" />
-              Kanu Street, Cigma Plaza, Nakuru
+              Kenyatta Avenue, ICEA Plaza, Nairobi
             </div>
           </div>
         </div>
