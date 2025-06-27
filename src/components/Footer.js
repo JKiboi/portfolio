@@ -1,6 +1,6 @@
 import React from 'react';
 import "../styles/Footer.css";
-import { Instagram, Twitter, Facebook, LinkedIn, Email } from '@material-ui/icons';
+import { Instagram, Twitter, Facebook, Linkedin, Mail } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -14,13 +14,13 @@ const Footer = () => {
             <Facebook className="icon" />
           </a>
           <a href="https://linkedin.com/" aria-label="LinkedIn">
-            <LinkedIn className="icon" />
+            <Linkedin className="icon" />
           </a>
           <a href="https://twitter.com/" aria-label="Twitter">
             <Twitter className="icon" />
           </a>
             <a href="mailto:anythingtechke@gmail.com" aria-label="Email">
-            <Email className="icon" />
+            <Mail className="icon" />
           </a>
         </div>
         <div className="footer-text">

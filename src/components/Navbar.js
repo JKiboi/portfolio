@@ -1,4 +1,4 @@
-import { Reorder, Home as HomeIcon, Work as WorkIcon, School as SchoolIcon, Contacts as ContactsIcon } from '@material-ui/icons';
+import { Menu, Home, Briefcase, GraduationCap, Mail } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import "../styles/Navbar.css";
@@ -15,24 +15,24 @@ const Navbar = () => {
     <div className='navbar' id={expandNavbar ? "open" : "close"}>
       <div className='toggleButton'>
         <button onClick={() => setExpandNavbar(prev => !prev)}>
-           <Reorder />
+           <Menu />
         </button>
       </div>
       <div className='links'>
          <Link to="/">
-            <HomeIcon className='nav-icon' />
+            <Home className='nav-icon' />
             Home
          </Link>
          <Link to="/projects">
-            <WorkIcon className='nav-icon' />
+            <Briefcase className='nav-icon' />
             Projects
          </Link>
          <Link to="/experience">
-            <SchoolIcon className='nav-icon' />
+            <GraduationCap className='nav-icon' />
             Experience
          </Link>
          <Link to="/contacts">
-            <ContactsIcon className='nav-icon' />
+            <Mail className='nav-icon' />
             Contacts
          </Link>
       </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { GitHub } from "@material-ui/icons";
+import { Github } from "lucide-react";
 
 const ProjectItem = ({ image, name, link, github, skills }) => {
   return (
@@ -20,7 +20,7 @@ const ProjectItem = ({ image, name, link, github, skills }) => {
           rel="noopener noreferrer"
           className="github"
         >
-          <GitHub />
+          <Github />
         </a>
         <p>
           Skills:<span style={{ fontWeight: "bold" }}>{skills}</span>

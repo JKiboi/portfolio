@@ -1,5 +1,5 @@
 import React from "react";
-import { Email, GitHub, LinkedIn, Twitter } from "@material-ui/icons";
+import { Mail, Github, Linkedin, Twitter } from "lucide-react";
 import "../styles/SocialLinks.css";
 
 export const SocialLinks = () => {
@@ -11,7 +11,7 @@ export const SocialLinks = () => {
         rel="noopener noreferrer"
         aria-label="GitHub"
       >
-        <GitHub />
+        <Github />
       </a>
       <a
         href="https://twitter.com/home"
@@ -27,7 +27,7 @@ export const SocialLinks = () => {
         rel="noopener noreferrer"
         aria-label="LinkedIn"
       >
-        <LinkedIn />
+        <Linkedin />
       </a>
       <a
         href="mailto:anythingtechke@gmail.com"
@@ -35,7 +35,7 @@ export const SocialLinks = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Email />
+        <Mail />
       </a>
     </div>
   );
