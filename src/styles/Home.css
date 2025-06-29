@@ -32,52 +32,92 @@
   margin-top: 20px; /* Add some space below the typed text */
 }
 
-@media only screen and (max-width: 1200px) {
-  .typed-text {
-    font-size: 3.5rem;
-  }
-  .about .prompt {
-    font-size: 1.3rem;
-    width: 80%;
-  }
+.developer-photo {
+  width: 200px; /* Increased size */
+  height: 200px; /* Increased size */
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 30px; /* Increased margin */
+  box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.3),
+    0 0 0 10px rgba(255, 255, 255, 0.1); /* Subtle white border effect */
+  transition: box-shadow 0.3s ease-in-out; /* Smooth transition for hover effects */
 }
 
-@media only screen and (max-width: 768px) {
-  .typed-text {
-    font-size: 2.5rem; /* Further reduced for tablets */
-    min-height: 80px;
-  }
-  .about .prompt {
-    font-size: 1.1rem;
-    width: 90%;
-  }
-  .developer-photo {
-    width: 150px; /* Smaller size for tablets */
-    height: 150px;
-    margin-bottom: 20px;
-  }
+.developer-photo:hover {
+  box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.5),
+    0 0 0 15px rgba(255, 255, 255, 0.2); /* Slightly larger shadow on hover */
 }
 
-@media only screen and (max-width: 480px) {
-  .typed-text {
-    font-size: 1.8rem; /* Significantly reduced for mobile */
-    min-height: 60px;
-  }
-  .about .prompt {
-    font-size: 0.9rem;
-    width: 95%;
-  }
-  .developer-photo {
-    width: 120px; /* Even smaller for mobile */
-    height: 120px;
-    margin-bottom: 15px;
-  }
-  .skills h1 {
-    font-size: 2rem;
-  }
-  .skills .list span {
-    font-size: 0.9rem;
-  }
+.developer-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 800px;
+  margin-top: 20px;
+}
+
+.bio {
+  font-size: 1.2rem;
+  margin: 20px 0;
+  line-height: 1.6;
+  color: #e0e0e0; /* Lighter text for bio */
+  max-width: 600px;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.cta-button {
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background-color: #ffd700; /* Gold color to match typed text */
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background-color: #ffc400;
+  transform: translateY(-2px);
+}
+
+.cta-button.secondary {
+  background-color: transparent;
+  border: 2px solid #ffd700;
+  color: #ffd700;
+}
+
+.cta-button.secondary:hover {
+  background-color: #ffd700;
+  color: #333;
+}
+
+.featured-projects {
+  padding: 40px 20px;
+  background-color: var(--background-color); /* Use theme background */
+  text-align: center;
+}
+
+.featured-projects-title {
+  color: var(--text-dark);
+  font-size: 2.5rem;
+  margin-bottom: 30px;
 }
 
 .skills {
@@ -112,72 +152,76 @@
   margin-top: 5px;
 }
 
+@media only screen and (min-width: 769px) {
+  .about {
+    flex-direction: row;
+    gap: 50px;
+    padding: 40px;
+  }
+
+  .developer-photo {
+    margin-bottom: 0;
+  }
+
+  .about-text {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
 @media only screen and (max-width: 1200px) {
-  .about h2 {
+  .typed-text {
     font-size: 3.5rem;
   }
   .about .prompt {
     font-size: 1.3rem;
     width: 80%;
   }
-
   .skills {
     font-size: 1.5rem;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  .about h2 {
-    font-size: 3rem;
+  .typed-text {
+    font-size: 2.5rem; /* Further reduced for tablets */
+    min-height: 80px;
   }
   .about .prompt {
     font-size: 1.1rem;
     width: 90%;
   }
-
+  .developer-photo {
+    width: 150px; /* Smaller size for tablets */
+    height: 150px;
+    margin-bottom: 20px;
+  }
   .skills {
     font-size: 1.3rem;
   }
 }
 
 @media only screen and (max-width: 480px) {
-  .about h2 {
-    font-size: 2.5rem;
+  .typed-text {
+    font-size: 1.8rem; /* Significantly reduced for mobile */
+    min-height: 60px;
   }
   .about .prompt {
-    font-size: 1rem;
-    width: 100%;
+    font-size: 0.9rem;
+    width: 95%;
   }
-  .skills {
-    font-size: 1.1rem;
-    width: 100%;
+  .developer-photo {
+    width: 120px; /* Even smaller for mobile */
+    height: 120px;
+    margin-bottom: 15px;
   }
-
   .skills h1 {
     font-size: 2rem;
   }
-
+  .skills .list span {
+    font-size: 0.9rem;
+  }
   .list span {
     font-size: 1rem;
   }
-}
-
-.developer-photo {
-  width: 200px; /* Increased size */
-  height: 200px; /* Increased size */
-  border-radius: 50%;
-  overflow: hidden;
-  margin-bottom: 30px; /* Increased margin */
-  box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.3), 0 0 0 10px rgba(255, 255, 255, 0.1); /* Subtle white border effect */
-  transition: box-shadow 0.3s ease-in-out; /* Smooth transition for hover effects */
-}
-
-.developer-photo:hover {
-  box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.5), 0 0 0 15px rgba(255, 255, 255, 0.2); /* Slightly larger shadow on hover */
-}
-
-.developer-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
