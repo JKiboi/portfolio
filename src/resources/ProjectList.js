@@ -1,4 +1,4 @@
-import hrsystem from "../assets/hrsystem.png";
+import hrsystem from "../assets/hrsystem1.png";
 import hvacflow from "../assets/hvac-flow2.png";
 import events from "../assets/events1.png";
 import bikes from "../assets/bikes.png";
