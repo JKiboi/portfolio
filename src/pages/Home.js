@@ -1,3 +1,4 @@
+//pages/Home.js
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import "../styles/Home.css";
@@ -17,13 +18,17 @@ const Home = () => {
     const typed = new Typed(el.current, {
       strings: [
         "Hi, I'm James Kiboi",
-        "A Full-Stack Developer.",
-        "I build solutions for real-world challenges.",
+        "I build dynamic web applications.",
+        "From concept to deployment, I bring ideas to life.",
+        "Specializing in the MERN stack.",
+        "Let's create something amazing together!"
       ],
       typeSpeed: 50,
-      backSpeed: 20,
+      backSpeed: 40,
       loop: true,
-      showCursor: false,
+      showCursor: true,
+      cursorChar: "|",
+      smartBackspace: true,
     });
 
     return () => {
@@ -37,29 +42,33 @@ const Home = () => {
   return (
     <div className="home">
       <div className="about">
-        <div className="developer-photo">
-          <img src={developerPhoto} alt="Developer" />
-        </div>
-        <div className="about-text">
-          <span ref={el} className="typed-text"></span>
-          <p className="bio">
-            A software developer with a deep passion for learning and creating
-            solutions that solve real-life challenges.
-          </p>
-          <div className="cta-buttons">
-            <Link to="/projects" className="cta-button">
-              View My Work
-            </Link>
-            <a
-              href={resume}
-              download="james_kiboi_resume.pdf"
-              className="cta-button secondary"
-            >
-              Download Resume
-            </a>
+        <div className="about-content">
+          <div className="developer-photo">
+            <img src={developerPhoto} alt="Developer" />
           </div>
-          <div className="prompt">
-            <SocialLinks />
+          <div className="about-text">
+            <div className="typed-container">
+              <span ref={el} className="typed-text"></span>
+            </div>
+            <p className="bio">
+              A software developer with a deep passion for learning and creating
+              solutions that solve real-life challenges.
+            </p>
+            <div className="cta-buttons">
+              <Link to="/projects" className="cta-button">
+                View My Work
+              </Link>
+              <a
+                href={resume}
+                download="james_kiboi_resume.pdf"
+                className="cta-button secondary"
+              >
+                Download Resume
+              </a>
+            </div>
+            <div className="prompt">
+              <SocialLinks />
+            </div>
           </div>
         </div>
       </div>
