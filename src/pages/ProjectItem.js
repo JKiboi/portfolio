@@ -9,26 +9,30 @@ const ProjectItem = ({ image, name, link, github, skills }) => {
         <div style={{ backgroundImage: `url(${image})` }} className="bgImage" />
         <div className="project-overlay">
           <div className="overlay-content">
-            <h1>{name}</h1>
             <p className="view-project-prompt">
               View Project <ArrowRight size={18} />
             </p>
           </div>
         </div>
       </a>
-      <div className="project-info">
-        <p>
-          <b>Skills:</b> {skills}
-        </p>
-        <a
-          href={github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="github-link"
-          aria-label="GitHub Repository"
-        >
-          <Github />
-        </a>
+
+      {/* --- Content Area with Permanently Visible Title --- */}
+      <div className="project-content">
+        <h1>{name}</h1>
+        <div className="project-info">
+          <p>
+            <b>Skills:</b> {skills}
+          </p>
+          <a
+            href={github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="github-link"
+            aria-label="GitHub Repository"
+          >
+            <Github />
+          </a>
+        </div>
       </div>
     </div>
   );

@@ -1,5 +1,4 @@
 /* styles/Projects.css */
-/* Add this to the top of the file */
 .projects {
   width: 100%;
   display: flex;
@@ -51,14 +50,14 @@
   height: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px; /* Increased gap */
+  gap: 30px;
   padding: 20px;
   justify-items: center;
 }
 
 .projectItem {
   background-color: var(--card-background);
-  border-radius: 15px; /* Softer radius */
+  border-radius: 15px;
   width: 100%;
   max-width: 320px;
   height: auto;
@@ -78,7 +77,7 @@
   position: relative;
   display: block;
   overflow: hidden;
-  height: 220px; /* Fixed height for image area */
+  height: 220px;
 }
 
 .projectItem .bgImage {
@@ -91,7 +90,7 @@
 }
 
 .projectItem:hover .bgImage {
-  transform: scale(1.1); /* Zoom effect on hover */
+  transform: scale(1.1);
 }
 
 .project-overlay {
@@ -100,11 +99,11 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 80%);
   opacity: 0;
   transition: opacity 0.4s ease;
   display: flex;
-  align-items: flex-end; /* Align content to the bottom */
+  align-items: flex-end;
   padding: 20px;
   box-sizing: border-box;
 }
@@ -113,41 +112,42 @@
   opacity: 1;
 }
 
-.overlay-content h1, .overlay-content .view-project-prompt {
+.overlay-content .view-project-prompt {
   color: white;
   margin: 0;
-  transform: translateY(20px);
-  opacity: 0;
-  transition: transform 0.4s ease, opacity 0.4s ease;
-}
-
-.projectItem:hover .overlay-content h1 {
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: 0.1s;
-}
-
-.overlay-content h1 {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.view-project-prompt {
-  font-size: 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
   display: flex;
   align-items: center;
   gap: 5px;
-  margin-top: 5px;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 0.4s 0.1s ease, opacity 0.4s 0.1s ease;
 }
 
 .projectItem:hover .view-project-prompt {
   opacity: 1;
   transform: translateY(0);
-  transition-delay: 0.2s;
+}
+
+/* --- NEW STYLES for permanently visible content --- */
+.project-content {
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Allows this section to grow and push info to the bottom */
+}
+
+.project-content h1 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0 0 15px 0; /* Margin bottom to push skills down */
+  text-align: left;
 }
 
 .project-info {
-  padding: 15px;
+  margin-top: auto; /* Pushes this to the bottom of the .project-content container */
   display: flex;
   justify-content: space-between;
   align-items: center;
