@@ -99,7 +99,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 80%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 80%);
   opacity: 0;
   transition: opacity 0.4s ease;
   display: flex;
@@ -108,46 +108,53 @@
   box-sizing: border-box;
 }
 
+/* --- CORRECTED BEHAVIOR: Overlay ONLY appears on hover --- */
 .projectItem:hover .project-overlay {
   opacity: 1;
 }
 
+/* --- SLEEK ANIMATION STYLES --- */
+.overlay-content h1,
 .overlay-content .view-project-prompt {
   color: white;
   margin: 0;
+  transform: translateY(20px);
+  opacity: 0;
+  /* Define the transition for both properties */
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.overlay-content h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.overlay-content .view-project-prompt {
   font-size: 1.1rem;
   font-weight: 500;
   display: flex;
   align-items: center;
   gap: 5px;
-  transform: translateY(20px);
-  opacity: 0;
-  transition: transform 0.4s 0.1s ease, opacity 0.4s 0.1s ease;
 }
 
-.projectItem:hover .view-project-prompt {
+/* --- STAGGERED ANIMATION ON HOVER --- */
+.projectItem:hover .overlay-content h1 {
   opacity: 1;
   transform: translateY(0);
+  transition-delay: 0.1s; /* Title appears first */
 }
 
-/* --- NEW STYLES for permanently visible content --- */
-.project-content {
-  padding: 15px 20px;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1; /* Allows this section to grow and push info to the bottom */
+.projectItem:hover .overlay-content .view-project-prompt {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s; /* Prompt appears second */
 }
 
-.project-content h1 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: var(--text-dark);
-  margin: 0 0 15px 0; /* Margin bottom to push skills down */
-  text-align: left;
-}
-
+/* --- Styles for bottom info section --- */
 .project-info {
-  margin-top: auto; /* Pushes this to the bottom of the .project-content container */
+  padding: 15px 20px;
+  margin-top: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
