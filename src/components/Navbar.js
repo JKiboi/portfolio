@@ -8,29 +8,45 @@ import { useTheme } from '../context/ThemeContext';
 
 const Navbar = () => {
    const [expandNavbar, setExpandNavbar] = useState(false);
+   const [isScrolled, setIsScrolled] = useState(false); // State to track scroll
    const navigate = useNavigate();
    const { theme, toggleTheme } = useTheme();
 
-   // Effect to close the navbar whenever the route changes
+   useEffect(() => {
+    const handleScroll = () => {
+      // Set state to true if user has scrolled more than 10px, false otherwise
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    // Add event listener for scroll
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup function to remove the event listener
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+   }, []);
+
    useEffect(() => {
     setExpandNavbar(false);
    }, [navigate]);
 
-   // Effect to prevent scrolling when the mobile menu is open
    useEffect(() => {
     if (expandNavbar) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'auto';
     }
-    // Cleanup function to restore scrolling when component unmounts
     return () => {
       document.body.style.overflow = 'auto';
     };
   }, [expandNavbar]);
 
+   // Conditionally build class names
+   const navbarClasses = `navbar ${isScrolled ? 'scrolled' : ''} ${expandNavbar ? 'open' : 'close'}`;
+
    return (
-    <div className='navbar' id={expandNavbar ? "open" : "close"}>
+    <div className={navbarClasses}>
       <div className='toggleButton'>
         <button 
           onClick={() => setExpandNavbar(prev => !prev)}

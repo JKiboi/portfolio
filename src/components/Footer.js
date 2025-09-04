@@ -1,3 +1,4 @@
+//components/Footer.js
 import React from 'react';
 import "../styles/Footer.css";
 import { 
@@ -11,6 +12,7 @@ import {
   MapPin,
   ExternalLink
 } from 'lucide-react';
+import { Link } from 'react-router-dom'; // Import Link for internal navigation
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -48,12 +50,13 @@ const Footer = () => {
     }
   ];
 
+  // Updated quickLinks array
   const quickLinks = [
     { name: 'Home', path: '/' },
     { name: 'Projects', path: '/projects' },
     { name: 'Experience', path: '/experience' },
-    { name: 'Resume', path: '/resume' },
-    { name: 'Contact', path: '/contact' }
+    // Corrected the path to '/contacts' (plural) to match the router
+    { name: 'Contact', path: '/contacts' } 
   ];
 
   return (
@@ -74,10 +77,11 @@ const Footer = () => {
             <ul className="footer-links">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <a href={link.path} className="footer-link">
+                  {/* Use React Router's Link for internal navigation */}
+                  <Link to={link.path} className="footer-link">
                     <ExternalLink size={14} />
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

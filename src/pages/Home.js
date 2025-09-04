@@ -9,7 +9,6 @@ import Typed from "typed.js";
 import SkillBar from "../components/SkillBar";
 import { ProjectList } from "../resources/ProjectList";
 import ProjectItem from "./ProjectItem";
-import resume from "../assets/software resume.pdf";
 
 const Home = () => {
   const el = useRef(null);
@@ -17,14 +16,15 @@ const Home = () => {
   useEffect(() => {
     const typed = new Typed(el.current, {
       strings: [
-        "Hi, I'm James Kiboi",
-        "I build dynamic web applications.",
-        "From concept to deployment, I bring ideas to life.",
-        "Specializing in the MERN stack.",
-        "Let's create something amazing together!"
+        "Hi, I'm James Kiboi.",
+        "I engineer digital experiences.",
+        "Crafting beautiful user interfaces with React.js.",
+        "Building scalable back-end services with Node.js.",
+        "From pixel-perfect UIs to robust APIs.",
+        "Let's build something incredible together."
       ],
       typeSpeed: 50,
-      backSpeed: 40,
+      backSpeed: 35,
       loop: true,
       showCursor: true,
       cursorChar: "|",
@@ -58,13 +58,6 @@ const Home = () => {
               <Link to="/projects" className="cta-button">
                 View My Work
               </Link>
-              <a
-                href={resume}
-                download="james_kiboi_resume.pdf"
-                className="cta-button secondary"
-              >
-                Download Resume
-              </a>
             </div>
             <div className="prompt">
               <SocialLinks />
