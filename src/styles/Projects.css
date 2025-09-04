@@ -1,4 +1,5 @@
 /* styles/Projects.css */
+/* ... (keep all the existing styles from .projects down to .projectList) ... */
 .projects {
   width: 100%;
   display: flex;
@@ -6,7 +7,6 @@
   align-items: center;
   padding: 20px 0;
 }
-
 .projects h1 {
   text-align: center;
   color: var(--text-dark);
@@ -15,7 +15,6 @@
   margin: 1.5rem 0;
   width: 100%;
 }
-
 .filters {
   display: flex;
   gap: 20px;
@@ -25,9 +24,7 @@
   width: 90%;
   flex-wrap: wrap;
 }
-
-.filters input,
-.filters select {
+.filters input, .filters select {
   padding: 10px 15px;
   border: 1px solid var(--text-dark);
   border-radius: 5px;
@@ -38,13 +35,10 @@
   max-width: 300px;
   width: 100%;
 }
-
-.filters input:focus,
-.filters select:focus {
+.filters input:focus, .filters select:focus {
   border-color: var(--primary-color);
   outline: none;
 }
-
 .projectList {
   width: 90%;
   height: auto;
@@ -54,13 +48,14 @@
   padding: 20px;
   justify-items: center;
 }
+/* ... (end of styles to keep) ... */
+
 
 .projectItem {
   background-color: var(--card-background);
   border-radius: 15px;
   width: 100%;
   max-width: 320px;
-  height: auto;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   overflow: hidden;
@@ -89,6 +84,7 @@
   transition: transform 0.4s ease;
 }
 
+/* Image zoom effect will still work on desktop hover */
 .projectItem:hover .bgImage {
   transform: scale(1.1);
 }
@@ -99,7 +95,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 80%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 80%);
   opacity: 0;
   transition: opacity 0.4s ease;
   display: flex;
@@ -108,52 +104,60 @@
   box-sizing: border-box;
 }
 
-/* --- CORRECTED BEHAVIOR: Overlay ONLY appears on hover --- */
-.projectItem:hover .project-overlay {
-  opacity: 1;
-}
-
-/* --- SLEEK ANIMATION STYLES --- */
-.overlay-content h1,
 .overlay-content .view-project-prompt {
   color: white;
   margin: 0;
-  transform: translateY(20px);
-  opacity: 0;
-  /* Define the transition for both properties */
-  transition: transform 0.4s ease, opacity 0.4s ease;
-}
-
-.overlay-content h1 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 5px;
-}
-
-.overlay-content .view-project-prompt {
   font-size: 1.1rem;
   font-weight: 500;
   display: flex;
   align-items: center;
   gap: 5px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: transform 0.4s 0.1s ease, opacity 0.4s 0.1s ease;
 }
 
-/* --- STAGGERED ANIMATION ON HOVER --- */
-.projectItem:hover .overlay-content h1 {
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: 0.1s; /* Title appears first */
+/* --- REQUIREMENT 2, PART A: Desktop Hover Animation --- */
+/* These styles ONLY apply to screens wider than 768px */
+@media (min-width: 769px) {
+  .projectItem:hover .project-overlay {
+    opacity: 1;
+  }
+  .projectItem:hover .view-project-prompt {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.projectItem:hover .overlay-content .view-project-prompt {
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: 0.2s; /* Prompt appears second */
+/* --- REQUIREMENT 2, PART B: Mobile Scroll-in-View Animation --- */
+/* These styles ONLY apply to screens 768px or narrower */
+@media (max-width: 768px) {
+  .projectItem.is-visible .project-overlay {
+    opacity: 1;
+  }
+  .projectItem.is-visible .view-project-prompt {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* --- Styles for bottom info section --- */
-.project-info {
+.project-content {
   padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Title is always visible and styled correctly */
+.project-content h1 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0 0 15px 0;
+  text-align: left;
+}
+
+.project-info {
   margin-top: auto;
   display: flex;
   justify-content: space-between;
