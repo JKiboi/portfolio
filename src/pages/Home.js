@@ -1,4 +1,4 @@
-//pages/Home.js
+// src/pages/Home.js
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import "../styles/Home.css";
@@ -17,10 +17,10 @@ const Home = () => {
     const typed = new Typed(el.current, {
       strings: [
         "Hi, I'm James Kiboi.",
-        "I engineer digital experiences.",
-        "Crafting beautiful user interfaces with React.js.",
-        "Building scalable back-end services with Node.js.",
-        "From pixel-perfect UIs to robust APIs.",
+        "I engineer intelligent digital experiences.",
+        "Integrating LLMs and AI into modern MERN applications.",
+        "Building scalable back-end services with Node.js and RAG pipelines.",
+        "Crafting data-driven, AI-enhanced user experiences with React.js.",
         "Let's build something incredible together."
       ],
       typeSpeed: 50,
@@ -41,6 +41,7 @@ const Home = () => {
 
   return (
     <div className="home">
+      {/* ====== ABOUT SECTION ====== */}
       <div className="about">
         <div className="about-content">
           <div className="developer-photo">
@@ -51,8 +52,10 @@ const Home = () => {
               <span ref={el} className="typed-text"></span>
             </div>
             <p className="bio">
-              A software developer with a deep passion for learning and creating
-              solutions that solve real-life challenges.
+              A Full-Stack Developer specializing in MERN applications with integrated
+              Artificial Intelligence. I build intelligent systems using LLMs,
+              Retrieval-Augmented Generation (RAG), LangChain, and APIs —
+              combining powerful data pipelines with clean, modern user interfaces.
             </p>
             <div className="cta-buttons">
               <Link to="/projects" className="cta-button">
@@ -66,6 +69,7 @@ const Home = () => {
         </div>
       </div>
 
+      {/* ====== FEATURED PROJECTS SECTION ====== */}
       <div className="featured-projects">
         <h1 className="featured-projects-title">Featured Projects</h1>
         <div className="projectList">
@@ -82,6 +86,7 @@ const Home = () => {
         </div>
       </div>
 
+      {/* ====== SKILLS SECTION ====== */}
       <div className="skills">
         <h1>Skills</h1>
         <div className="skill-bars-container">
@@ -94,6 +99,14 @@ const Home = () => {
           <SkillBar
             title="JavaScript, TypeScript, CSS3, HTML5"
             percentage={95}
+          />
+          <SkillBar
+            title="LLM Integration, RAG, LangChain, LLM API"
+            percentage={85}
+          />
+          <SkillBar
+            title="AI Workflow Automation & Chatbot Development"
+            percentage={80}
           />
         </div>
       </div>
