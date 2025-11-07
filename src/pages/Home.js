@@ -17,11 +17,11 @@ const Home = () => {
     const typed = new Typed(el.current, {
       strings: [
         "Hi, I'm James Kiboi.",
-        "I engineer autonomous AI agents.",
-        "Architecting complex RAG pipelines with MERN.",
-        "Building intelligent back-ends with Node.js & Vector Embeddings.",
-        "Crafting responsive front-ends for AI-driven workflows.",
-        "Let's build the future, together."
+        "A Full-Stack AI Engineer.",
+        "An Autonomous Agent Architect.",
+        "A RAG and Vector Search Specialist.",
+        "A MERN Stack Expert.",
+        "Let's build intelligent systems."
       ],
       typeSpeed: 50,
       backSpeed: 35,
@@ -52,12 +52,10 @@ const Home = () => {
               <span ref={el} className="typed-text"></span>
             </div>
             <p className="bio">
-              As a Full-Stack AI Engineer, I operate at the intersection of modern web
-              applications and autonomous systems. My expertise lies in architecting and
-              deploying intelligent agents and complex RAG pipelines from the ground up.
-              Using vector embeddings, LangChain, and LLM APIs, I transform standard
-              MERN applications into dynamic, self-sufficient systems that deliver
-              measurable business value.
+              My focus is on architecting and deploying autonomous agents and sophisticated
+              RAG pipelines that bridge the gap between powerful LLMs and practical business
+              needs. I transform standard MERN applications into dynamic, self-sufficient
+              systems, turning complex data into intelligent, actionable user experiences.
             </p>
             <div className="cta-buttons">
               <Link to="/projects" className="cta-button">
