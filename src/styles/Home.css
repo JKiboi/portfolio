@@ -24,7 +24,6 @@
   flex-direction: column;
   align-items: center;
   gap: 30px;
-  /* Increased max-width for overall layout */
   max-width: 1300px;
   width: 100%;
 }
@@ -55,9 +54,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex: 1; /* Allow the container to grow */
-  /* --- FIX PART 1: REMOVED the max-width that was causing the wrap --- */
-  /* max-width: 900px; */ /* This line has been removed */
+  flex: 1; 
 }
 
 .typed-container {
@@ -75,8 +72,7 @@
   color: #ffd700;
   font-weight: 700; 
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-  /* --- FIX PART 2: Added explicit command to prevent wrapping --- */
-  white-space: nowrap; 
+  /* NOTE: The 'nowrap' rule is now handled in the media query below */
 }
 
 .bio {
@@ -147,6 +143,11 @@
   font-size: 2.5rem;
 }
 
+/* ==================================
+   RESPONSIVE BREAKPOINTS 
+================================== */
+
+/* --- DESKTOP BEHAVIOR (Large Screens) --- */
 @media (min-width: 769px) {
   .about-content {
     flex-direction: row;
@@ -160,11 +161,19 @@
   .developer-photo {
     flex-shrink: 0;
   }
+
+  /* --- THE FIX: Apply no-wrap ONLY on large screens --- */
+  .typed-text {
+    white-space: nowrap;
+  }
 }
 
+/* --- TABLET BEHAVIOR --- */
 @media (max-width: 768px) {
   .typed-text {
     font-size: 2.5rem;
+    /* On smaller screens, we allow wrapping by default */
+    white-space: normal; 
   }
 
   .developer-photo {
@@ -173,6 +182,7 @@
   }
 }
 
+/* --- PHONE BEHAVIOR --- */
 @media (max-width: 480px) {
   .typed-text {
     font-size: 2rem;
