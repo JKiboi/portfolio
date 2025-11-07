@@ -24,7 +24,7 @@
   flex-direction: column;
   align-items: center;
   gap: 30px;
-  /* UPDATED: Increased max-width to give content more space */
+  /* Increased max-width for overall layout */
   max-width: 1300px;
   width: 100%;
 }
@@ -55,10 +55,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* UPDATED: Increased max-width to prevent text wrapping */
-  max-width: 900px; 
-  /* NEW: Allow this container to grow */
-  flex: 1;
+  flex: 1; /* Allow the container to grow */
+  /* --- FIX PART 1: REMOVED the max-width that was causing the wrap --- */
+  /* max-width: 900px; */ /* This line has been removed */
 }
 
 .typed-container {
@@ -74,10 +73,10 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 3.5rem;
   color: #ffd700;
-  /* NOTE: word-break is good, but the container width is the true fix */
-  word-break: break-word; 
   font-weight: 700; 
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  /* --- FIX PART 2: Added explicit command to prevent wrapping --- */
+  white-space: nowrap; 
 }
 
 .bio {

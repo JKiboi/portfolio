@@ -16,12 +16,12 @@ const Home = () => {
   useEffect(() => {
     const typed = new Typed(el.current, {
       strings: [
-        "Hi, I'm James Kiboi.",
-        "A Full-Stack AI Engineer.",
-        "An Autonomous Agent Architect.",
-        "A RAG and Vector Search Specialist.",
-        "A MERN Stack Expert.",
-        "Let's build intelligent systems."
+    "Hi, I'm James Kiboi.",
+    "I architect intelligent systems.",
+    "Orchestrating autonomous agentic workflows.",
+    "Fusing the MERN stack with LLM-driven logic.",
+    "Building digital minds with RAG & vector search.",
+    "Let's build the future!!."
       ],
       typeSpeed: 50,
       backSpeed: 35,
@@ -52,10 +52,13 @@ const Home = () => {
               <span ref={el} className="typed-text"></span>
             </div>
             <p className="bio">
-              My focus is on architecting and deploying autonomous agents and sophisticated
-              RAG pipelines that bridge the gap between powerful LLMs and practical business
-              needs. I transform standard MERN applications into dynamic, self-sufficient
-              systems, turning complex data into intelligent, actionable user experiences.
+              As a Full-Stack AI Engineer, I don't just build systems—I upgrade
+              them. By architecting and deploying autonomous agents and RAG
+              pipelines with LangChain and vector embeddings, I transform
+              standard MERN applications into intelligent, self-sufficient
+              systems. My work bridges the gap between complex data and
+              actionable user experiences, delivering a clear return on
+              innovation.
             </p>
             <div className="cta-buttons">
               <Link to="/projects" className="cta-button">
