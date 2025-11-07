@@ -182,10 +182,13 @@
   }
 }
 
-/* --- PHONE BEHAVIOR --- */
+/* --- PHONE BEHAVIOR (UPDATED) --- */
 @media (max-width: 480px) {
   .typed-text {
     font-size: 2rem;
+    /* This explicitly ensures that text will wrap to the next line if it's too long,
+       which is the correct, practical behavior for phone screens. */
+    white-space: normal; 
   }
   
   .developer-photo {
