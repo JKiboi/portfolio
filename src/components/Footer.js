@@ -133,9 +133,9 @@ const Footer = () => {
             <p className="copyright">
               © {currentYear} James Kiboi. All rights reserved.
             </p>
-            <p className="crafted-by">
+            {/* <p className="crafted-by">
               Crafted with <span className="heart">❤️</span> by James Kiboi
-            </p>
+            </p> */}
           </div>
         </div>
       </div>
