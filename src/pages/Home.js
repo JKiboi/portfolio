@@ -16,12 +16,12 @@ const Home = () => {
   useEffect(() => {
     const typed = new Typed(el.current, {
       strings: [
-    "Hi, I'm James Kiboi.",
-    "I architect intelligent systems.",
-    "Orchestrating autonomous agentic workflows.",
-    "Fusing the MERN stack with LLM-driven logic.",
-    "Building digital minds with RAG & vector search.",
-    "Let's build the future!!."
+        "Hi, I'm James Kiboi.",
+        "I architect intelligent systems.",
+        "Orchestrating autonomous agentic workflows.",
+        "Fusing the MERN stack with LLM-driven logic.",
+        "Building digital minds with RAG & vector search.",
+        "Let's build the future!!."
       ],
       typeSpeed: 50,
       backSpeed: 35,
@@ -61,7 +61,7 @@ const Home = () => {
               innovation.
             </p>
             <div className="cta-buttons">
-              <Link to="/projects" className="cta-button">
+              <Link to="/projects" className="cta-button primary">
                 View My Work
               </Link>
             </div>

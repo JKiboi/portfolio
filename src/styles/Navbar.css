@@ -7,21 +7,21 @@
   top: 0;
   left: 0;
   z-index: 1000;
-  
-  /* --- AT REST STATE: Darker, semi-transparent thematic background for high contrast --- */
-  background-color: rgba(92, 42, 122, 0.8); 
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+
+  /* --- AT REST STATE: Deep Slate for classy contrast --- */
+  background-color: #2c3e50;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   backdrop-filter: none;
-  
-  transition: background-color 0.4s ease, backdrop-filter 0.4s ease, height 0.4s ease, box-shadow 0.4s ease;
+
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-/* --- SCROLLED STATE: Lighter, more transparent, blurred glassmorphism effect --- */
+/* --- SCROLLED STATE: Darker with glass effect --- */
 .navbar.scrolled {
-  background-color: rgba(155, 89, 182, 0.7); 
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  height: 80px;
+  background-color: rgba(26, 26, 26, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  height: 70px;
 }
 
 .links {
@@ -44,24 +44,37 @@
 }
 
 .navbar a:hover {
-  color: #ffd700;
+  color: #f1c40f;
+  /* Refined Gold */
 }
 
 .theme-toggle-button {
-  background: none;
-  border: none;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   cursor: pointer;
   color: var(--text-light);
   margin-left: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
-  transition: color 0.3s ease;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .theme-toggle-button:hover {
-  color: #ffd700;
+  color: #f1c40f;
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.1) rotate(15deg);
+  border-color: rgba(241, 196, 15, 0.3);
+}
+
+.theme-toggle-button svg {
+  transition: transform 0.5s ease;
+}
+
+.theme-toggle-button:active svg {
+  transform: scale(0.85);
 }
 
 .nav-icon {
@@ -74,23 +87,29 @@
   position: absolute;
   top: 0;
   right: 0;
-  height: 100px; /* Match the initial navbar height */
-  display: none; /* Will be shown in the media query */
+  height: 100px;
+  /* Match the initial navbar height */
+  display: none;
+  /* Will be shown in the media query */
   align-items: center;
   justify-content: center;
-  z-index: 1001; /* Ensure it stays above the links */
-  transition: height 0.4s ease; /* Transition height with scroll */
+  z-index: 1001;
+  /* Ensure it stays above the links */
+  transition: height 0.4s ease;
+  /* Transition height with scroll */
 }
 
 .navbar.scrolled .toggleButton {
-  height: 80px; /* Match shrunk navbar height */
+  height: 80px;
+  /* Match shrunk navbar height */
 }
 
 .toggleButton button {
-  padding: 20px; /* Use padding for a larger click area */
+  padding: 20px;
+  /* Use padding for a larger click area */
   background-color: transparent;
   border: none;
-  color: #ffd700;
+  color: #f1c40f;
   cursor: pointer;
   z-index: 1002;
   /* --- SLEEK ANIMATION: Add a smooth rotation transition --- */
@@ -104,13 +123,14 @@
 
 .toggleButton svg {
   font-size: 40px;
-  display: block; /* Helps prevent extra spacing issues */
+  display: block;
+  /* Helps prevent extra spacing issues */
 }
 
 /* --- MOBILE MENU OPEN STATE --- */
 .navbar.open {
   height: 100vh;
-  background-color: var(--secondary-color);
+  background-color: #1a1a1a;
   backdrop-filter: none;
 }
 
@@ -123,12 +143,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
 }
 
 .navbar.open a {
-  font-size: 2rem;
-  color: #ffd700;
+  font-size: 1.8rem;
+  color: #f1c40f;
 }
 
 /* --- RESPONSIVE DESIGN --- */
@@ -144,28 +164,34 @@
   .toggleButton {
     display: flex;
   }
+
   .navbar.close .links {
     display: none;
   }
 }
 
 @media only screen and (min-width: 601px) {
+
   /* Hide the toggle button and ensure links are visible on desktop */
   .toggleButton {
     display: none;
   }
+
   .navbar.open {
     height: 100px;
   }
+
   .navbar.open.scrolled {
     height: 80px;
   }
+
   .navbar.open .links {
     position: static;
     flex-direction: row;
     justify-content: center;
     background: transparent;
   }
+
   .navbar.open a {
     font-size: 1.5rem;
     color: var(--text-light);

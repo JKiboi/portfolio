@@ -1,8 +1,6 @@
 import React, { useRef, useState } from 'react';
 import "../styles/Contact.css";
-import Address from "../assets/address.png";
-import Phone from "../assets/phone.png";
-import Email from "../assets/email.png";
+import { Phone, Mail, MapPin } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 
 const Contacts = () => {
@@ -36,28 +34,27 @@ const Contacts = () => {
 
   return (
     <div className="contacts">
-      <div className="c-bg"></div>
       <div className="c-wrapper">
         <div className="c-left">
           <h1 className="c-title">Let's discuss your project</h1>
           <div className="c-info">
             <div className="c-info-item">
-              <img src={Phone} alt="Phone icon" className="c-icon" />
+              <Phone className="c-icon" />
               +254721418479
             </div>
             <div className="c-info-item">
-              <img src={Email} alt="Email icon" className="c-icon" />
+              <Mail className="c-icon" />
               anythingtechke@gmail.com
             </div>
             <div className="c-info-item">
-              <img src={Address} alt="Address icon" className="c-icon" />
+              <MapPin className="c-icon" />
               Kenyatta Avenue, ICEA Plaza, Nairobi
             </div>
           </div>
         </div>
         <div className="c-right">
           <p className="c-desc">
-            <b>What are your needs?</b> Get in touch. Always available to listen and bring your ideas to life.
+            <b>What are your needs?</b> Get in touch.
           </p>
           <form ref={formRef} onSubmit={handleSubmit} id="myForm">
             <input
