@@ -20,7 +20,7 @@
   padding: 80px 20px;
   box-sizing: border-box;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .about::after {
@@ -85,7 +85,7 @@
 
 .typed-text {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  font-size: 4rem;
+  font-size: clamp(2rem, 3.5vw, 4rem);
   color: #f1c40f;
   /* Refined Gold */
   font-weight: 800;
