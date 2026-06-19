@@ -19,10 +19,40 @@ import bikes from "../assets/bikes.png";
 import maths from "../assets/maths.png";
 import aviator from "../assets/aviator.png";
 import meals from "../assets/meals.png";
+import wakili from "../assets/wakili.png";
+import gaffer from "../assets/gaffer.png";
+import mechboq from "../assets/mechboq.png";
 
 export const ProjectList = [
   {
     id: 1,
+    image: gaffer,
+    link: "https://gaffersportsai.onrender.com",
+    name: "Gaffer Sports AI",
+    skills: "ReactJS, Node.js, Express.js, MongoDB Atlas, Gemini AI",
+    github: "",
+    category: "Full-Stack",
+  },
+  {
+    id: 2,
+    image: wakili,
+    link: "https://wakiliassistant.onrender.com/",
+    name: "Wakili AI Assistant",
+    skills: "ReactJS, Node.js, Express.js, MongoDB Atlas, Gemini AI",
+    github: "",
+    category: "Full-Stack",
+  },
+  {
+    id: 3,
+    image: mechboq,
+    link: "https://mechboqassistant.onrender.com",
+    name: "MECH BOQ Assistant",
+    skills: "ReactJS, Node.js, Express.js, MongoDB Atlas, Gemini AI",
+    github: "",
+    category: "Full-Stack",
+  },
+  {
+    id: 4,
     image: bikes,
     link: "https://motorbike-credit-sales-app.onrender.com",
     name: "Motorbike Credit Sales app",
@@ -31,7 +61,7 @@ export const ProjectList = [
     category: "Full-Stack",
   },
   {
-    id: 2,
+    id: 5,
     image: events,
     link: "https://tikitiflow.onrender.com",
     name: "Event Ticketing app",
@@ -40,7 +70,7 @@ export const ProjectList = [
     category: "Full-Stack",
   },
   {
-    id: 3,
+    id: 6,
     image: meals,
     link: "https://hotel-meals-booking-app.onrender.com",
     name: "Hotel Meals Booking app",
@@ -49,7 +79,7 @@ export const ProjectList = [
     category: "Full-Stack",
   },
   {
-    id: 4,
+    id: 7,
     image: aviator,
     link: "https://aviatorsim-app.onrender.com",
     name: "Simulated Aviator game app",
@@ -58,7 +88,7 @@ export const ProjectList = [
     category: "Full-Stack",
   },
   {
-    id: 5,
+    id: 8,
     image: movies,
     link: "https://movies-app-updated.onrender.com",
     name: "Movie Review App",
@@ -67,7 +97,7 @@ export const ProjectList = [
     category: "Front-End",
   },
   {
-    id: 6,
+    id: 9,
     image: maths,
     link: "https://interactive-maths-lab.onrender.com",
     name: "Interactive-Maths app",
@@ -76,7 +106,7 @@ export const ProjectList = [
     category: "Front-End",
   },
   {
-    id: 7,
+    id: 10,
     image: quiz,
     link: "https://tv-quiz-app.onrender.com",
     name: "Quiz App",
@@ -85,7 +115,7 @@ export const ProjectList = [
     category: "Front-End",
   },
   {
-    id: 8,
+    id: 11,
     image: hosi,
     link: "https://saas-hosi-man-app.onrender.com",
     name: "Hospital management app",
@@ -94,7 +124,7 @@ export const ProjectList = [
     category: "Full-Stack",
   },
   {
-    id: 9,
+    id: 12,
     image: billy,
     link: "https://mern-tours-app.onrender.com",
     name: "Billy Travels app",
@@ -103,7 +133,7 @@ export const ProjectList = [
     category: "Full-Stack",
   },
   {
-    id: 10,
+    id: 13,
     image: lowest,
     link: "https://lowest-unique-bidder-app.onrender.com",
     name: "Lowest unique bidding app",
@@ -112,7 +142,7 @@ export const ProjectList = [
     category: "Full-Stack",
   },
   {
-    id: 11,
+    id: 14,
     image: cliniclog,
     link: "https://cliniclog-app.onrender.com",
     name: "Clinic Log",
@@ -121,7 +151,7 @@ export const ProjectList = [
     category: "Full-Stack",
   },
   {
-    id: 12,
+    id: 15,
     image: payment,
     link: "https://hosi-payments-app.onrender.com",
     name: "Payment Tracking App",
@@ -130,7 +160,7 @@ export const ProjectList = [
     category: "Full-Stack",
   },
   {
-    id: 13,
+    id: 16,
     image: waterapp,
     link: "https://mern-annelle-app.onrender.com",
     name: "Business management app",
@@ -139,7 +169,7 @@ export const ProjectList = [
     category: "Full-Stack",
   },
   {
-    id: 14,
+    id: 17,
     image: bidmaniaapp,
     link: "https://angukia-mali3-app.onrender.com",
     name: "Online bidding app",
@@ -148,7 +178,7 @@ export const ProjectList = [
     category: "Full-Stack",
   },
   {
-    id: 15,
+    id: 18,
     image: commerce2,
     link: "https://singular-piroshki-00fdce.netlify.app/",
     name: "E commerce App",
@@ -157,7 +187,7 @@ export const ProjectList = [
     category: "Front-End",
   },
   {
-    id: 16,
+    id: 19,
     image: travels,
     link: "https://tours-and-travel-app.onrender.com",
     name: "Travel and Tours",
@@ -166,7 +196,7 @@ export const ProjectList = [
     category: "Full-Stack",
   },
   {
-    id: 17,
+    id: 20,
     image: portfolio,
     link: "https://whimsical-blini-647ba1.netlify.app/",
     name: "Portfolio",
@@ -175,7 +205,7 @@ export const ProjectList = [
     category: "Front-End",
   },
   {
-    id: 18,
+    id: 21,
     image: weather,
     link: "https://harmonious-sfogliatella-7ad5e5.netlify.app/",
     name: "Weather App",
@@ -184,7 +214,7 @@ export const ProjectList = [
     category: "Front-End",
   },
   {
-    id: 19,
+    id: 22,
     image: calculator,
     link: "https://boisterous-lokum-6251ea.netlify.app/",
     name: "Calculator App",
@@ -193,7 +223,7 @@ export const ProjectList = [
     category: "Front-End",
   },
   {
-    id: 20,
+    id: 23,
     image: recipe,
     link: "https://elegant-bombolone-d7cb31.netlify.app/",
     name: "Recipe App",
@@ -202,7 +232,7 @@ export const ProjectList = [
     category: "Front-End",
   },
   {
-    id: 21,
+    id: 24,
     image: reduxapp,
     link: "https://redux-counter-todo-app.onrender.com/",
     name: "Redux counter todos app",
