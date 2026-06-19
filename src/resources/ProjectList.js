@@ -1,10 +1,26 @@
-import hrsystem from "../assets/hrsystem1.png";
-import hvacflow from "../assets/hvac-flow2.png";
+import weather from "../assets/weather.png";
+import calculator from "../assets/calculator.png";
+import quiz from "../assets/quiz.png";
+import recipe from "../assets/recipe.png";
+import movies from "../assets/movies.png";
+import commerce2 from "../assets/commerce2.png";
+import portfolio from "../assets/portfolio.png";
+import travels from "../assets/travels.png";
+import bidmaniaapp from "../assets/bidmaniaapp.png";
+import waterapp from "../assets/annelle-home.png";
+import reduxapp from "../assets/reduxapp.png";
+import lowest from "../assets/lowest.png";
+import hosi from "../assets/hosi.png";
+import billy from "../assets/billy.png";
+import payment from "../assets/payment.png";
+import cliniclog from "../assets/cliniclog.png";
 import events from "../assets/events1.png";
 import bikes from "../assets/bikes.png";
 import maths from "../assets/maths.png";
 import aviator from "../assets/aviator.png";
 import meals from "../assets/meals.png";
+import hrsystem from "../assets/hrsystem1.png";
+import hvacflow from "../assets/hvac-flow2.png";
 
 export const ProjectList = [
   {
