@@ -1,4 +1,5 @@
-import { Menu, Home, Briefcase, GraduationCap, Mail, FileText, Sun, Moon } from 'lucide-react';
+//components/Navbar.js
+import { Menu, Home, Briefcase, GraduationCap, Mail, FileText, Sun, Moon, X } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import "../styles/Navbar.css";
@@ -7,18 +8,51 @@ import { useTheme } from '../context/ThemeContext';
 
 const Navbar = () => {
    const [expandNavbar, setExpandNavbar] = useState(false);
+   const [isScrolled, setIsScrolled] = useState(false); // State to track scroll
    const navigate = useNavigate();
    const { theme, toggleTheme } = useTheme();
+
+   useEffect(() => {
+    const handleScroll = () => {
+      // Set state to true if user has scrolled more than 10px, false otherwise
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    // Add event listener for scroll
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup function to remove the event listener
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+   }, []);
 
    useEffect(() => {
     setExpandNavbar(false);
    }, [navigate]);
 
+   useEffect(() => {
+    if (expandNavbar) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [expandNavbar]);
+
+   // Conditionally build class names
+   const navbarClasses = `navbar ${isScrolled ? 'scrolled' : ''} ${expandNavbar ? 'open' : 'close'}`;
+
    return (
-    <div className='navbar' id={expandNavbar ? "open" : "close"}>
+    <div className={navbarClasses}>
       <div className='toggleButton'>
-        <button onClick={() => setExpandNavbar(prev => !prev)}>
-           <Menu />
+        <button 
+          onClick={() => setExpandNavbar(prev => !prev)}
+          aria-label={expandNavbar ? 'Close navigation menu' : 'Open navigation menu'}
+        >
+           {expandNavbar ? <X /> : <Menu />}
         </button>
       </div>
       <div className='links'>

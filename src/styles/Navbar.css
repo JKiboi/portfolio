@@ -1,8 +1,27 @@
+/* styles/Navbar.css - FINAL IMPLEMENTATION FOR IDEA 2 (WITH VISIBILITY & BUTTON FIX) */
+
 .navbar {
   width: 100%;
-  height: 100px; 
-  background: var(--secondary-color); 
-  transition: height 0.3s ease-in-out; 
+  height: 100px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  /* --- AT REST STATE: Deep Slate for classy contrast --- */
+  background-color: #2c3e50;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  backdrop-filter: none;
+
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* --- SCROLLED STATE: Darker with glass effect --- */
+.navbar.scrolled {
+  background-color: rgba(26, 26, 26, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  height: 70px;
 }
 
 .links {
@@ -17,84 +36,127 @@
 .navbar a {
   color: var(--text-light);
   text-decoration: none;
-  margin: 20px; 
-  font-size: 1.5rem; 
-  transition: color 0.3s ease; 
+  margin: 20px;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
 }
 
 .navbar a:hover {
-  color: #ffd700; 
+  color: #f1c40f;
+  /* Refined Gold */
 }
 
 .theme-toggle-button {
-  background: none;
-  border: none;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   cursor: pointer;
   color: var(--text-light);
   margin-left: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .theme-toggle-button:hover {
-  color: #ffd700;
+  color: #f1c40f;
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.1) rotate(15deg);
+  border-color: rgba(241, 196, 15, 0.3);
 }
 
-.theme-toggle-button .nav-icon {
-  margin-right: 0; /* Remove margin for the icon within the button */
+.theme-toggle-button svg {
+  transition: transform 0.5s ease;
 }
 
-.nav-icon{
+.theme-toggle-button:active svg {
+  transform: scale(0.85);
+}
+
+.nav-icon {
   margin-right: 8px;
-  font-size: 2rem;
 }
 
-
+/* --- MOBILE TOGGLE BUTTON STYLES (THE FIX IS HERE) --- */
 .toggleButton {
-  width: 100%;
+  /* --- POSITIONAL FIX: Use absolute positioning to lock the button --- */
+  position: absolute;
+  top: 0;
+  right: 0;
   height: 100px;
-  display: flex;
+  /* Match the initial navbar height */
+  display: none;
+  /* Will be shown in the media query */
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
+  z-index: 1001;
+  /* Ensure it stays above the links */
+  transition: height 0.4s ease;
+  /* Transition height with scroll */
 }
 
-.toggleButton svg {
-  font-size: 40px; 
+.navbar.scrolled .toggleButton {
+  height: 80px;
+  /* Match shrunk navbar height */
 }
 
 .toggleButton button {
-  margin-right: 20px;
+  padding: 20px;
+  /* Use padding for a larger click area */
   background-color: transparent;
   border: none;
-  color: var(--text-light);
+  color: #f1c40f;
   cursor: pointer;
-  transition: color 0.3s ease; /* Transition for button color */
+  z-index: 1002;
+  /* --- SLEEK ANIMATION: Add a smooth rotation transition --- */
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-  .toggleButton button:hover {
-    color: #ffd700; /* Example color on hover */
+/* --- SLEEK ANIMATION: Rotate the button when the menu is open --- */
+.navbar.open .toggleButton button {
+  transform: rotate(180deg);
 }
 
-#open {
+.toggleButton svg {
+  font-size: 40px;
+  display: block;
+  /* Helps prevent extra spacing issues */
+}
+
+/* --- MOBILE MENU OPEN STATE --- */
+.navbar.open {
   height: 100vh;
+  background-color: #1a1a1a;
+  backdrop-filter: none;
 }
 
-#open .links {
-  flex-direction: column;
-  justify-content: flex-start;
-  margin-top: 100px;
-}
-
-#open a {
+.navbar.open .links {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  text-align: center;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
 }
+
+.navbar.open a {
+  font-size: 1.8rem;
+  color: #f1c40f;
+}
+
+/* --- RESPONSIVE DESIGN --- */
 
 @media only screen and (max-width: 900px) {
   .navbar a {
-    width: 70px;
+    margin: 15px;
+    font-size: 1.2rem;
   }
 }
 
@@ -102,38 +164,36 @@
   .toggleButton {
     display: flex;
   }
-  #close a {
+
+  .navbar.close .links {
     display: none;
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 601px) {
+
+  /* Hide the toggle button and ensure links are visible on desktop */
   .toggleButton {
     display: none;
   }
 
-  .hiddenLinks {
-    display: none;
+  .navbar.open {
+    height: 100px;
   }
 
-  #open {
+  .navbar.open.scrolled {
     height: 80px;
   }
 
-  #open .links {
+  .navbar.open .links {
+    position: static;
     flex-direction: row;
+    justify-content: center;
+    background: transparent;
   }
-}
-@media screen and (max-width:480px){
-   .links {
-    text-decoration: none;
-    margin: 10px 5px;
-    flex-direction: column;
-    
+
+  .navbar.open a {
+    font-size: 1.5rem;
+    color: var(--text-light);
   }
-  .links a{
-    color:gold;
-    font-size: 20px;
-  }
-   
 }

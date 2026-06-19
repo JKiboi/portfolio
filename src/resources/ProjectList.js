@@ -1,58 +1,14 @@
-import weather from "../assets/weather.png";
-import calculator from "../assets/calculator.png";
-import quiz from "../assets/quiz.png";
-import recipe from "../assets/recipe.png";
-import movies from "../assets/movies.png";
-import commerce2 from "../assets/commerce2.png";
-import portfolio from "../assets/portfolio.png";
-import travels from "../assets/travels.png";
-import bidmaniaapp from "../assets/bidmaniaapp.png";
-import waterapp from "../assets/annelle-home.png";
-import reduxapp from "../assets/reduxapp.png";
-import lowest from "../assets/lowest.png";
-import hosi from "../assets/hosi.png";
-import billy from "../assets/billy.png";
-import payment from "../assets/payment.png";
-import cliniclog from "../assets/cliniclog.png";
+import hrsystem from "../assets/hrsystem1.png";
+import hvacflow from "../assets/hvac-flow2.png";
 import events from "../assets/events1.png";
 import bikes from "../assets/bikes.png";
 import maths from "../assets/maths.png";
 import aviator from "../assets/aviator.png";
 import meals from "../assets/meals.png";
-import wakili from "../assets/wakili.png";
-import gaffer from "../assets/gaffer.png";
-import mechboq from "../assets/mechboq.png";
 
 export const ProjectList = [
   {
     id: 1,
-    image: gaffer,
-    link: "https://gaffersportsai.onrender.com",
-    name: "Gaffer Sports AI",
-    skills: "ReactJS, Node.js, Express.js, MongoDB Atlas, Gemini AI",
-    github: "",
-    category: "Full-Stack",
-  },
-  {
-    id: 2,
-    image: wakili,
-    link: "https://wakiliassistant.onrender.com/",
-    name: "Wakili AI Assistant",
-    skills: "ReactJS, Node.js, Express.js, MongoDB Atlas, Gemini AI",
-    github: "",
-    category: "Full-Stack",
-  },
-  {
-    id: 3,
-    image: mechboq,
-    link: "https://mechboqassistant.onrender.com",
-    name: "MECH BOQ Assistant",
-    skills: "ReactJS, Node.js, Express.js, MongoDB Atlas, Gemini AI",
-    github: "",
-    category: "Full-Stack",
-  },
-  {
-    id: 4,
     image: bikes,
     link: "https://motorbike-credit-sales-app.onrender.com",
     name: "Motorbike Credit Sales app",
@@ -151,7 +107,7 @@ export const ProjectList = [
     category: "Full-Stack",
   },
   {
-    id: 15,
+    id: 12,
     image: payment,
     link: "https://hosi-payments-app.onrender.com",
     name: "Payment Tracking App",
@@ -160,7 +116,7 @@ export const ProjectList = [
     category: "Full-Stack",
   },
   {
-    id: 16,
+    id: 13,
     image: waterapp,
     link: "https://mern-annelle-app.onrender.com",
     name: "Business management app",
@@ -169,7 +125,7 @@ export const ProjectList = [
     category: "Full-Stack",
   },
   {
-    id: 17,
+    id: 14,
     image: bidmaniaapp,
     link: "https://angukia-mali3-app.onrender.com",
     name: "Online bidding app",
@@ -178,7 +134,7 @@ export const ProjectList = [
     category: "Full-Stack",
   },
   {
-    id: 18,
+    id: 15,
     image: commerce2,
     link: "https://singular-piroshki-00fdce.netlify.app/",
     name: "E commerce App",
@@ -187,7 +143,7 @@ export const ProjectList = [
     category: "Front-End",
   },
   {
-    id: 19,
+    id: 16,
     image: travels,
     link: "https://tours-and-travel-app.onrender.com",
     name: "Travel and Tours",
@@ -196,7 +152,7 @@ export const ProjectList = [
     category: "Full-Stack",
   },
   {
-    id: 20,
+    id: 17,
     image: portfolio,
     link: "https://whimsical-blini-647ba1.netlify.app/",
     name: "Portfolio",
@@ -205,7 +161,7 @@ export const ProjectList = [
     category: "Front-End",
   },
   {
-    id: 21,
+    id: 18,
     image: weather,
     link: "https://harmonious-sfogliatella-7ad5e5.netlify.app/",
     name: "Weather App",
@@ -214,7 +170,7 @@ export const ProjectList = [
     category: "Front-End",
   },
   {
-    id: 22,
+    id: 19,
     image: calculator,
     link: "https://boisterous-lokum-6251ea.netlify.app/",
     name: "Calculator App",
@@ -223,7 +179,7 @@ export const ProjectList = [
     category: "Front-End",
   },
   {
-    id: 23,
+    id: 20,
     image: recipe,
     link: "https://elegant-bombolone-d7cb31.netlify.app/",
     name: "Recipe App",
@@ -232,7 +188,7 @@ export const ProjectList = [
     category: "Front-End",
   },
   {
-    id: 24,
+    id: 21,
     image: reduxapp,
     link: "https://redux-counter-todo-app.onrender.com/",
     name: "Redux counter todos app",

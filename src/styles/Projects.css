@@ -1,9 +1,20 @@
-.projects .projectTitle {
+/* styles/Projects.css */
+/* ... (keep all the existing styles from .projects down to .projectList) ... */
+.projects {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.projects h1 {
   text-align: center;
-  color: var(--text-dark); /* Using CSS variable */
-  font-size: 3rem;
-  font-weight: bolder;
-  margin-bottom: 25px;
+  color: var(--text-dark);
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 1.5rem 0;
+  width: 100%;
 }
 
 .filters {
@@ -25,8 +36,8 @@
   background-color: var(--card-background);
   color: var(--text-dark);
   transition: border-color 0.3s ease;
-  max-width: 300px; /* Set a maximum width for standard size */
-  width: 100%; /* Ensure it still takes full width on smaller screens if needed */
+  max-width: 300px;
+  width: 100%;
 }
 
 .filters input:focus,
@@ -40,122 +51,160 @@
   height: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  gap: 30px;
   padding: 20px;
   justify-items: center;
 }
 
+/* ... (end of styles to keep) ... */
+
+
 .projectItem {
   background-color: var(--card-background);
-  border-radius: 10px;
-  width: 100%; /* Allow card to take up full column width */
-  max-width: 300px; /* Maximum card width */
-  height: auto; /* Make height flexible based on content */
-  margin-bottom:20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden; /* Ensure image doesn't overflow */
-   display: flex;
-   flex-direction: column;
+  border-radius: 4px;
+  /* Shaper corners */
+  width: 100%;
+  max-width: 340px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.body.dark-theme .projectItem {
+  border-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .projectItem:hover {
-  transform: translateY(-8px) scale(1.02); /* Slightly more pronounced lift and scale */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25); /* More pronounced shadow */
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
 }
 
-.p-browser {
-  height: 20px;
-  background-color: #34495e;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  display: flex;
-  align-items: center;
-  position: relative; /* Change from sticky to relative */
-}
-
-.p-circle {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  margin: 3px;
-  background-color: #fff;
+.project-link-wrapper {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  height: 240px;
+  background-color: #f0f0f0;
 }
 
 .projectItem .bgImage {
   width: 100%;
-  height: 200px;
+  height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  object-fit: cover;
-  border-bottom: 1px solid #ddd; /* Give some separation between the image and the content*/
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.projectItem h1 {
-  font-size: 1.5rem;
-  padding: 12px;
+.projectItem:hover .bgImage {
+  transform: scale(1.05);
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(44, 62, 80, 0.85);
+  /* Deep Slate Overlay */
+  opacity: 0;
+  transition: all 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.overlay-content {
   text-align: center;
-  color: var(--text-dark);
 }
 
-.projectItem .git-skills {
+.overlay-content .view-project-prompt {
+  color: white;
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.4s 0.1s ease;
+}
+
+/* Desktop Hover */
+@media (min-width: 769px) {
+  .projectItem:hover .project-overlay {
+    opacity: 1;
+  }
+
+  .projectItem:hover .view-project-prompt {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Visibility */
+@media (max-width: 768px) {
+  .projectItem.is-visible .project-overlay {
+    opacity: 1;
+  }
+
+  .projectItem.is-visible .view-project-prompt {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-content {
+  padding: 25px 20px;
   display: flex;
   flex-direction: column;
-  padding: 10px;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
+  flex-grow: 1;
 }
 
-.projectItem .github {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--primary-color);
-  color: var(--text-light);
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  font-size: 18px;
-  transition: background-color 0.3s ease-in-out;
-  text-decoration: none;
-}
-
-  .projectItem .github:hover {
-    background-color: #007bff;
-  }
-
-.projectItem p {
-  top: 0;
-  text-align: center;
+.project-content h1 {
   font-size: 1.1rem;
+  font-weight: 700;
   color: var(--text-dark);
+  margin: 0 0 12px 0;
+  text-align: left;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
-@media only screen and (max-width: 768px) {
-  .projectList {
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  }
-  
-  .projectItem h1{
-      font-size: 1.3rem;
-  }
+.project-info {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
 }
 
-@media only screen and (max-width: 480px) {
-  .projectList {
-    width: 100%;
-    padding: 8px;
-  }
-  .projectItem{
-     margin-bottom:20px;
-  }
-   .projectItem h1 {
-      font-size: 1.2rem;
-      padding: 8px;
-  }
-    .projectItem p{
-    font-size: 1rem;
-  }
+.project-info p {
+  margin: 0;
+  font-size: 0.85rem;
+  flex-grow: 1;
+  color: var(--text-dark);
+  opacity: 0.7;
+  font-weight: 400;
+}
+
+.github-link {
+  color: var(--text-dark);
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.github-link:hover {
+  color: #3498db;
+  opacity: 1;
+  transform: scale(1.1);
 }

@@ -1,3 +1,4 @@
+// src/pages/Home.js
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import "../styles/Home.css";
@@ -8,7 +9,6 @@ import Typed from "typed.js";
 import SkillBar from "../components/SkillBar";
 import { ProjectList } from "../resources/ProjectList";
 import ProjectItem from "./ProjectItem";
-import resume from "../assets/software resume.pdf";
 
 const Home = () => {
   const el = useRef(null);
@@ -16,14 +16,19 @@ const Home = () => {
   useEffect(() => {
     const typed = new Typed(el.current, {
       strings: [
-        "Hi, I'm James Kiboi",
-        "A Full-Stack Developer.",
-        "I build solutions for real-world challenges.",
+        "Hi, I'm James Kiboi.",
+        "I architect intelligent systems.",
+        "Orchestrating autonomous agentic workflows.",
+        "Fusing the MERN stack with LLM-driven logic.",
+        "Building digital minds with RAG & vector search.",
+        "Let's build the future!!."
       ],
       typeSpeed: 50,
-      backSpeed: 20,
+      backSpeed: 35,
       loop: true,
-      showCursor: false,
+      showCursor: true,
+      cursorChar: "|",
+      smartBackspace: true,
     });
 
     return () => {
@@ -36,34 +41,38 @@ const Home = () => {
 
   return (
     <div className="home">
+      {/* ====== ABOUT SECTION ====== */}
       <div className="about">
-        <div className="developer-photo">
-          <img src={developerPhoto} alt="Developer" />
-        </div>
-        <div className="about-text">
-          <span ref={el} className="typed-text"></span>
-          <p className="bio">
-            A software developer with a deep passion for learning and creating
-            solutions that solve real-life challenges.
-          </p>
-          <div className="cta-buttons">
-            <Link to="/projects" className="cta-button">
-              View My Work
-            </Link>
-            <a
-              href={resume}
-              download="james_kiboi_resume.pdf"
-              className="cta-button secondary"
-            >
-              Download Resume
-            </a>
+        <div className="about-content">
+          <div className="developer-photo">
+            <img src={developerPhoto} alt="Developer" />
           </div>
-          <div className="prompt">
-            <SocialLinks />
+          <div className="about-text">
+            <div className="typed-container">
+              <span ref={el} className="typed-text"></span>
+            </div>
+            <p className="bio">
+              As a Full-Stack AI Engineer, I don't just build systems—I upgrade
+              them. By architecting and deploying autonomous agents and RAG
+              pipelines with LangChain and vector embeddings, I transform
+              standard MERN applications into intelligent, self-sufficient
+              systems. My work bridges the gap between complex data and
+              actionable user experiences, delivering a clear return on
+              innovation.
+            </p>
+            <div className="cta-buttons">
+              <Link to="/projects" className="cta-button primary">
+                View My Work
+              </Link>
+            </div>
+            <div className="prompt">
+              <SocialLinks />
+            </div>
           </div>
         </div>
       </div>
 
+      {/* ====== FEATURED PROJECTS SECTION ====== */}
       <div className="featured-projects">
         <h1 className="featured-projects-title">Featured Projects</h1>
         <div className="projectList">
@@ -80,6 +89,7 @@ const Home = () => {
         </div>
       </div>
 
+      {/* ====== SKILLS SECTION ====== */}
       <div className="skills">
         <h1>Skills</h1>
         <div className="skill-bars-container">
@@ -92,6 +102,14 @@ const Home = () => {
           <SkillBar
             title="JavaScript, TypeScript, CSS3, HTML5"
             percentage={95}
+          />
+          <SkillBar
+            title="LLM Integration, RAG, LangChain, LLM API"
+            percentage={85}
+          />
+          <SkillBar
+            title="AI Workflow Automation & Chatbot Development"
+            percentage={80}
           />
         </div>
       </div>
